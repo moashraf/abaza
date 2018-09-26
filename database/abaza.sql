@@ -1,9 +1,9 @@
- -- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2018 at 01:41 PM
+-- Generation Time: Sep 26, 2018 at 06:07 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.13
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `all`
+-- Database: `abaza`
 --
 
 -- --------------------------------------------------------
@@ -46,15 +46,9 @@ CREATE TABLE `categories__products` (
 --
 
 INSERT INTO `categories__products` (`id`, `parentid`, `title`, `slug`, `lang`, `single_photo`, `body`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(26, 0, 'Prof. Gina Brakus', 'voluptatem-deserunt-libero-debitis-fugit-vel-veniam', 'ar', '881928967banner - Copy - Copy.jpg', 'Necessitatibus soluta itaque velit. Doloribus aliquam ad nihil voluptatem ut at.', '2018-04-05 13:22:55', '2018-09-20 10:40:15', NULL),
-(27, 26, 'sdfsdf', 'nihil-iste-voluptatem-sequi-dolorum-architecto-et-quo-ullam', 'ar', 'c2.jpg', 'sdfg', '2018-04-05 13:22:57', '2018-07-29 09:52:44', NULL),
-(32, 0, 'Prof. Gina Brakus', 'voluptatem-deserunt-libero-debitis-fugit-vel-veniam', 'ar', 'c2.jpg', 'Necessitatibus soluta itaque velit. Doloribus aliquam ad nihil voluptatem ut at.', '2018-04-05 13:22:55', '2018-07-25 13:28:19', NULL),
-(33, 26, 'sdfsdf', 'nihil-iste-voluptatem-sequi-dolorum-architecto-et-quo-ullam', 'ar', 'c2.jpg', 'sdfg', '2018-04-05 13:22:57', '2018-07-29 09:52:44', NULL),
-(35, 33, 'بامبو', 'dfgdf', 'ar', '14330882924.jpg', 'dfgdfg', '2018-04-15 06:14:09', '2018-07-25 13:27:29', NULL),
-(36, 26, 'راتان', 'sdrfdgsfdsf', 'ar', '20375652614.jpg', 'dfgdf', '2018-04-15 06:14:45', '2018-07-25 13:27:53', NULL),
-(37, 0, 'خارجي', 'ertertre', NULL, '17169723logo-chemistry (1).png', 'ertert', '2018-07-29 09:50:27', '2018-07-29 09:53:17', NULL),
-(38, 33, 'dfhg', 'gfhfg', NULL, '44058879802.png', 'fghgf', '2018-09-20 10:46:10', '2018-09-20 10:46:10', NULL),
-(39, 33, 'ggg', 'ggg', NULL, '356436394banner - Copy - Copy.jpg', 'gggg', '2018-09-20 10:46:46', '2018-09-20 10:46:46', NULL);
+(26, 0, 'مشروعات حالية\r\n', 'voluptatem-deserunt-libero-debitis-fugit-vel-veniam', 'ar', '881928967banner - Copy - Copy.jpg', 'Necessitatibus soluta itaque velit. Doloribus aliquam ad nihil voluptatem ut at.', '2018-04-05 13:22:55', '2018-09-20 10:40:15', NULL),
+(27, 0, 'مشاريع سابقة\r\n', 'nihil-iste-voluptatem-sequi-dolorum-architecto-et-quo-ullam', 'ar', 'c2.jpg', 'sdfg', '2018-04-05 13:22:57', '2018-07-29 09:52:44', NULL),
+(32, 0, 'مشروعات تحت الانشاء\r\n', 'voluptatem-deserunt-libero-debitis-fugit-vel-veniam', 'ar', 'c2.jpg', 'Necessitatibus soluta itaque velit. Doloribus aliquam ad nihil voluptatem ut at.', '2018-04-05 13:22:55', '2018-07-25 13:28:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -78,14 +72,18 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `title`, `body`, `slug`, `single_photo`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'fg', 'dfgdf', 'dfgfd', '1653971120tree.jpg', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
-(2, 'fg', 'dfgdf', 'dfgfd', '1653971120tree.jpg', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
-(3, 'fg', 'dfgdf', 'dfgfd', '1653971120tree.jpg', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
-(4, 'fg', 'dfgdf', 'dfgfd', '1653971120tree.jpg', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
-(5, 'fg', 'dfgdf', 'dfgfd', '1653971120tree.jpg', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
-(6, 'fg', 'dfgdf', 'dfgfd', '1653971120tree.jpg', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
-(7, 'fg', 'dfgdf', 'dfgfd', '1653971120tree.jpg', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
-(8, 'fg', 'dfgdf', 'dfgfd', '1653971120tree.jpg', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL);
+(1, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(2, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(3, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(4, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(5, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(6, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(7, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(8, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(9, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(10, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(11, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL),
+(12, 'fg', 'dfgdf', 'dfgfd', '100251532logo-two.png', '2018-08-16 13:11:26', '2018-08-16 13:11:26', NULL);
 
 -- --------------------------------------------------------
 
@@ -163,6 +161,13 @@ CREATE TABLE `n_e_w_s` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `n_e_w_s`
+--
+
+INSERT INTO `n_e_w_s` (`id`, `title`, `body`, `single_photo`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, '', 'dsf', 'dsf', 'dsf', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -245,27 +250,22 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `Material`, `Dimentions`, `Colors`, `name`, `body`, `single_photo`, `component`, `Net_weight`, `Note`, `Packing_content`, `cat_id`, `lang`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(26, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1718010453charge.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 28, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-09-23 08:28:31', '2018-09-23 08:28:31'),
-(27, 'bnmn', '546757', 'vgvj f fg', 'sadfds', 'Non voluptatum deleniti qui possimus. Aut placeat et nobis.Non voluptatum deleniti qui possimus. Aut placeat et nobis.', '1877588397banner.jpg', 'Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.', '257', 'aut', 'Nobis blanditiis quos non ipsum. Eveniet debitis molestiae voluptas qui voluptas.', 28, 'ar', 'dfgh dft r t rtyrytr', '2018-04-05 13:22:13', '2018-09-17 12:42:20', NULL),
-(28, NULL, NULL, 'fhjg', 'Miss Phoebe Kuphal PhD', 'Quam est perferendis eius unde consequatur impedit laborum. Voluptas quod qui adipisci sit labore.', '782815497banner - Copy - Copy.jpg', 'Mollitia eaque illo ea. Ad ut nemo praesentium et nihil.', '295', 'vitae', 'Incidunt hic minima aperiam. Maiores sunt sunt non. Hic quia ipsam nesciunt sed.', 28, 'ar', 'eum-quos-in-ipsum-consequatur', '2018-04-05 13:22:21', '2018-09-17 12:42:33', NULL),
-(29, NULL, NULL, NULL, 'Dr. Kendra Rohan', 'Voluptates sed ea magnam sed. Perferendis occaecati enim sapiente distinctio.', '1903937192tree.jpg', 'Soluta est voluptas est dolores quia rerum. Sit iure et amet et maxime nam.', '100', 'quos', 'Quas temporibus voluptatum error ut ea. Nesciunt vel fugiat blanditiis optio reiciendis.', 28, 'ar', 'cupiditate-unde-nam-qui-quia-qui', '2018-04-05 13:22:25', '2018-04-17 06:10:57', NULL),
-(30, NULL, NULL, NULL, 'Jaqueline Gusikowski', 'Autem dolor possimus totam magni. Nulla ut temporibus beatae quod molestiae voluptatem.', '1903937192tree.jpg', 'Labore magni nobis non sint fugit nisi. Similique non non omnis veritatis id.', '249', 'veniam', 'Iure non error distinctio. Ad officia aut sed aut officiis at distinctio.', 30, 'ar', 'dfgy dtyt rtyty', '2018-04-05 13:22:29', '2018-04-17 06:11:09', NULL),
-(31, NULL, NULL, NULL, 'sdf', 'dfd', '1903937192tree.jpg', 'sdf', 'sdf', 'fdf', 'sdf', 28, 'ar', 'sdfd', '2018-04-15 07:43:14', '2018-04-16 08:07:18', NULL),
-(32, NULL, NULL, NULL, 'sdf', 'dfd', '1903937192tree.jpg', 'sdf', 'sdf', 'fdf', 'sdf', 28, 'ar', 'sdfd', '2018-04-15 07:44:11', '2018-04-17 06:11:33', NULL),
-(33, NULL, NULL, NULL, 'sdf', 'dfd', '1903937192tree.jpg', 'sdf', 'sdf', 'fdf', 'sdf', 29, 'ar', 'sdfd', '2018-04-15 07:45:57', '2018-04-17 06:11:28', NULL),
-(34, NULL, NULL, NULL, 'zdfg', 'gdfg', '1903937192tree.jpg', 'dfgf', 'fgf', 'ff', 'ff', 29, 'ar', 'ff', '2018-04-15 08:25:18', '2018-04-17 06:11:37', NULL),
-(35, NULL, NULL, NULL, 'asdfg', 'gdfgh', '1903937192tree.jpg', 'fghgf', 'gfh', 'fgh', 'fgh', 29, 'ar', 'fghgf', '2018-04-17 05:42:15', '2018-04-17 06:11:52', NULL),
-(36, NULL, NULL, NULL, '282185', 'fhfgjh', '1903937192tree.jpg', 'fghfg', 'hfgh', 'fgh', 'fghfg', 29, 'ar', 'gfhfgh', '2018-04-17 05:42:37', '2018-04-17 06:12:03', NULL),
-(37, NULL, NULL, NULL, 'ghg', 'hgfhg', '1614293841banner - Copy - Copy.jpg', NULL, NULL, NULL, NULL, 28, NULL, 'fghgfh', '2018-07-29 09:36:59', '2018-09-17 12:43:39', NULL),
-(38, NULL, NULL, NULL, 'asdfds', 'dfgdfg', '1903937192tree.jpg', NULL, NULL, NULL, NULL, 27, NULL, 'dfgdfg', '2018-07-29 09:47:18', '2018-07-29 10:11:06', NULL),
-(39, NULL, NULL, NULL, 'tdyhfg', 'ghgfhfg', '1351747203banner - Copy - Copy.jpg', NULL, NULL, NULL, NULL, 28, NULL, 'fghgfhfgh', '2018-07-31 14:08:23', '2018-09-17 12:43:46', NULL),
-(40, NULL, NULL, NULL, 'sdf', 'dsfsdf', '1903937192tree.jpg', NULL, NULL, NULL, NULL, 28, NULL, 'sfdas', '2018-08-16 07:29:49', '2018-08-16 07:30:39', NULL),
-(41, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1718010453charge.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 28, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-09-23 08:28:38', '2018-09-23 08:28:38'),
-(42, NULL, NULL, NULL, 'sdf', 'dfd', '1903937192tree.jpg', 'sdf', 'sdf', 'fdf', 'sdf', 28, 'ar', 'sdfd', '2018-04-15 07:44:11', '2018-04-17 06:11:33', NULL),
-(43, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1718010453charge.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 28, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-08-16 10:01:26', NULL),
-(44, 'bnmn', NULL, 'bnmnb', 'sadfds', 'Non voluptatum deleniti qui possimus. Aut placeat et nobis.Non voluptatum deleniti qui possimus. Aut placeat et nobis.', '1877588397banner.jpg', 'Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.', '257', 'aut', 'Nobis blanditiis quos non ipsum. Eveniet debitis molestiae voluptas qui voluptas.', 28, 'ar', 'dfgh dft r t rtyrytr', '2018-04-05 13:22:13', '2018-09-17 12:42:20', NULL),
-(45, NULL, NULL, 'fhjg', 'Miss Phoebe Kuphal PhD', 'Quam est perferendis eius unde consequatur impedit laborum. Voluptas quod qui adipisci sit labore.', '782815497banner - Copy - Copy.jpg', 'Mollitia eaque illo ea. Ad ut nemo praesentium et nihil.', '295', 'vitae', 'Incidunt hic minima aperiam. Maiores sunt sunt non. Hic quia ipsam nesciunt sed.', 28, 'ar', 'eum-quos-in-ipsum-consequatur', '2018-04-05 13:22:21', '2018-09-17 12:42:33', NULL),
-(46, NULL, NULL, NULL, 'Dr. Kendra Rohan', 'Voluptates sed ea magnam sed. Perferendis occaecati enim sapiente distinctio.', '1903937192tree.jpg', 'Soluta est voluptas est dolores quia rerum. Sit iure et amet et maxime nam.', '100', 'quos', 'Quas temporibus voluptatum error ut ea. Nesciunt vel fugiat blanditiis optio reiciendis.', 28, 'ar', 'cupiditate-unde-nam-qui-quia-qui', '2018-04-05 13:22:25', '2018-04-17 06:10:57', NULL);
+(26, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1615481246MT-5856_23.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 26, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-09-26 13:14:23', NULL),
+(27, 'bnmn', '546757', 'vgvj f fg', 'sadfds', 'Non voluptatum deleniti qui possimus. Aut placeat et nobis.Non voluptatum deleniti qui possimus. Aut placeat et nobis.', '843963112property-01-exterior-680x510.jpg', 'Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.', '257', 'aut', 'Nobis blanditiis quos non ipsum. Eveniet debitis molestiae voluptas qui voluptas.', 26, 'ar', 'dfgh dft r t rtyrytr', '2018-04-05 13:22:13', '2018-09-26 13:10:25', NULL),
+(28, NULL, NULL, 'fhjg', 'Miss Phoebe Kuphal PhD', 'Quam est perferendis eius unde consequatur impedit laborum. Voluptas quod qui adipisci sit labore.', '938004168property-01-exterior-680x510.jpg', 'Mollitia eaque illo ea. Ad ut nemo praesentium et nihil.', '295', 'vitae', 'Incidunt hic minima aperiam. Maiores sunt sunt non. Hic quia ipsam nesciunt sed.', 27, 'ar', 'eum-quos-in-ipsum-consequatur', '2018-04-05 13:22:21', '2018-09-26 13:10:14', NULL),
+(29, NULL, NULL, NULL, 'Dr. Kendra Rohan', 'Voluptates sed ea magnam sed. Perferendis occaecati enim sapiente distinctio.', '1489711713property-01-exterior-680x510.jpg', 'Soluta est voluptas est dolores quia rerum. Sit iure et amet et maxime nam.', '100', 'quos', 'Quas temporibus voluptatum error ut ea. Nesciunt vel fugiat blanditiis optio reiciendis.', 27, 'ar', 'cupiditate-unde-nam-qui-quia-qui', '2018-04-05 13:22:25', '2018-09-26 13:10:51', NULL),
+(31, NULL, NULL, NULL, 'sdf', 'dfd', '843963112property-01-exterior-680x510.jpg', 'sdf', 'sdf', 'fdf', 'sdf', 32, 'ar', 'sdfd', '2018-04-15 07:43:14', '2018-04-16 08:07:18', NULL),
+(36, NULL, NULL, NULL, '282185', 'fhfgjh', '843963112property-01-exterior-680x510.jpg', 'fghfg', 'hfgh', 'fgh', 'fghfg', 32, 'ar', 'gfhfgh', '2018-04-17 05:42:37', '2018-04-17 06:12:03', NULL),
+(37, NULL, NULL, NULL, 'ghg', 'hgfhg', '843963112property-01-exterior-680x510.jpg', NULL, NULL, NULL, NULL, 32, NULL, 'fghgfh', '2018-07-29 09:36:59', '2018-09-17 12:43:39', NULL),
+(38, NULL, NULL, NULL, 'asdfds', 'dfgdfg', '843963112property-01-exterior-680x510.jpg', NULL, NULL, NULL, NULL, 27, NULL, 'dfgdfg', '2018-07-29 09:47:18', '2018-07-29 10:11:06', NULL),
+(39, NULL, NULL, NULL, 'tdyhfg', 'ghgfhfg', '843963112property-01-exterior-680x510.jpg', NULL, NULL, NULL, NULL, 32, NULL, 'fghgfhfgh', '2018-07-31 14:08:23', '2018-09-17 12:43:46', NULL),
+(40, NULL, NULL, NULL, 'sdf', 'dsfsdf', '893148110MT-5856_23.jpg', NULL, NULL, NULL, NULL, 26, NULL, 'sfdas', '2018-08-16 07:29:49', '2018-09-26 13:13:40', NULL),
+(41, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1718010453charge.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 32, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-09-23 08:28:38', '2018-09-23 08:28:38'),
+(42, NULL, NULL, NULL, 'sdf', 'dfd', '519674536MT-5856_23.jpg', 'sdf', 'sdf', 'fdf', 'sdf', 27, 'ar', 'sdfd', '2018-04-15 07:44:11', '2018-09-26 13:13:46', NULL),
+(43, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1325322216MT-5856_23.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 27, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-09-26 13:13:08', NULL),
+(44, 'bnmn', NULL, 'bnmnb', 'sadfds', 'Non voluptatum deleniti qui possimus. Aut placeat et nobis.Non voluptatum deleniti qui possimus. Aut placeat et nobis.', '1851702741MT-5856_23.jpg', 'Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.', '257', 'aut', 'Nobis blanditiis quos non ipsum. Eveniet debitis molestiae voluptas qui voluptas.', 26, 'ar', 'dfgh dft r t rtyrytr', '2018-04-05 13:22:13', '2018-09-26 13:41:37', NULL),
+(45, NULL, NULL, 'fhjg', 'Miss Phoebe Kuphal PhD', 'Quam est perferendis eius unde consequatur impedit laborum. Voluptas quod qui adipisci sit labore.', '1526002178MT-5856_23.jpg', 'Mollitia eaque illo ea. Ad ut nemo praesentium et nihil.', '295', 'vitae', 'Incidunt hic minima aperiam. Maiores sunt sunt non. Hic quia ipsam nesciunt sed.', 26, 'ar', 'eum-quos-in-ipsum-consequatur', '2018-04-05 13:22:21', '2018-09-26 13:13:54', NULL),
+(46, NULL, NULL, NULL, 'Dr. Kendra Rohan', 'Voluptates sed ea magnam sed. Perferendis occaecati enim sapiente distinctio.', '463801497MT-5856_23.jpg', 'Soluta est voluptas est dolores quia rerum. Sit iure et amet et maxime nam.', '100', 'quos', 'Quas temporibus voluptatum error ut ea. Nesciunt vel fugiat blanditiis optio reiciendis.', 26, 'ar', 'cupiditate-unde-nam-qui-quia-qui', '2018-04-05 13:22:25', '2018-09-26 13:13:31', NULL);
 
 -- --------------------------------------------------------
 
@@ -315,23 +315,33 @@ INSERT INTO `productsphotos` (`id`, `Product_id`, `Photo`, `lang`, `created_at`,
 (51, 35, '1453155616447392277g1.png', 'en', '2018-04-17 06:11:52', '2018-09-17 12:43:31', '2018-09-17 12:43:31'),
 (52, 35, '541924521753732218cake5.jpg', 'en', '2018-04-17 06:11:52', '2018-04-17 06:11:52', NULL),
 (53, 36, '914568710224926650g1.png', 'en', '2018-04-17 06:12:03', '2018-09-17 12:43:23', '2018-09-17 12:43:23'),
-(54, 36, '707161766447392277g1.png', 'en', '2018-04-17 06:12:03', '2018-04-17 06:12:03', NULL),
-(55, 36, '67832547753732218cake5.jpg', 'en', '2018-04-17 06:12:03', '2018-04-17 06:12:03', NULL),
-(56, 27, '753928010banner.jpg', 'ar', '2018-09-17 12:42:20', '2018-09-17 12:42:20', NULL),
-(57, 27, '1100499340banner - Copy (2).jpg', 'ar', '2018-09-17 12:42:20', '2018-09-17 12:42:20', NULL),
-(58, 27, '154016628banner - Copy - Copy.jpg', 'ar', '2018-09-17 12:42:20', '2018-09-17 12:42:20', NULL),
-(59, 28, '2025817288banner - Copy - Copy.jpg', 'ar', '2018-09-17 12:42:33', '2018-09-17 12:42:33', NULL),
-(60, 28, '1636990370banner - Copy (2).jpg', 'ar', '2018-09-17 12:42:33', '2018-09-17 12:42:33', NULL),
-(61, 28, '15542441banner - Copy.jpg', 'ar', '2018-09-17 12:42:33', '2018-09-17 12:42:33', NULL),
-(62, 28, '1899765874banner.jpg', 'ar', '2018-09-17 12:42:33', '2018-09-17 12:42:33', NULL),
-(63, 26, '3177916banner - Copy (2).jpg', 'ar', '2018-09-17 12:42:44', '2018-09-17 12:42:44', NULL),
-(64, 26, '164296666banner - Copy.jpg', 'ar', '2018-09-17 12:42:44', '2018-09-17 12:42:44', NULL),
-(65, 26, '1616301884banner.jpg', 'ar', '2018-09-17 12:42:44', '2018-09-17 12:42:44', NULL),
-(66, 29, '1606132017banner - Copy (2).jpg', 'ar', '2018-09-17 12:43:01', '2018-09-17 12:43:01', NULL),
-(67, 29, '402860213banner - Copy.jpg', 'ar', '2018-09-17 12:43:01', '2018-09-17 12:43:01', NULL),
-(68, 29, '1131776907banner.jpg', 'ar', '2018-09-17 12:43:01', '2018-09-17 12:43:01', NULL),
+(54, 36, '707161766447392277g1.png', 'en', '2018-04-17 06:12:03', '2018-09-26 13:14:49', '2018-09-26 13:14:49'),
+(55, 36, '67832547753732218cake5.jpg', 'en', '2018-04-17 06:12:03', '2018-09-26 13:14:50', '2018-09-26 13:14:50'),
+(56, 27, '753928010banner.jpg', 'ar', '2018-09-17 12:42:20', '2018-09-26 13:14:29', '2018-09-26 13:14:29'),
+(57, 27, '1100499340banner - Copy (2).jpg', 'ar', '2018-09-17 12:42:20', '2018-09-26 13:14:31', '2018-09-26 13:14:31'),
+(58, 27, '154016628banner - Copy - Copy.jpg', 'ar', '2018-09-17 12:42:20', '2018-09-26 13:14:33', '2018-09-26 13:14:33'),
+(59, 28, '2025817288banner - Copy - Copy.jpg', 'ar', '2018-09-17 12:42:33', '2018-09-26 13:14:35', '2018-09-26 13:14:35'),
+(60, 28, '1636990370banner - Copy (2).jpg', 'ar', '2018-09-17 12:42:33', '2018-09-26 13:14:37', '2018-09-26 13:14:37'),
+(61, 28, '15542441banner - Copy.jpg', 'ar', '2018-09-17 12:42:33', '2018-09-26 13:14:38', '2018-09-26 13:14:38'),
+(62, 28, '1899765874banner.jpg', 'ar', '2018-09-17 12:42:33', '2018-09-26 13:14:40', '2018-09-26 13:14:40'),
+(63, 26, '3177916banner - Copy (2).jpg', 'ar', '2018-09-17 12:42:44', '2018-09-26 13:04:17', '2018-09-26 13:04:17'),
+(64, 26, '164296666banner - Copy.jpg', 'ar', '2018-09-17 12:42:44', '2018-09-26 13:04:20', '2018-09-26 13:04:20'),
+(65, 26, '1616301884banner.jpg', 'ar', '2018-09-17 12:42:44', '2018-09-26 13:14:26', '2018-09-26 13:14:26'),
+(66, 29, '1606132017banner - Copy (2).jpg', 'ar', '2018-09-17 12:43:01', '2018-09-26 13:14:42', '2018-09-26 13:14:42'),
+(67, 29, '402860213banner - Copy.jpg', 'ar', '2018-09-17 12:43:01', '2018-09-26 13:14:44', '2018-09-26 13:14:44'),
+(68, 29, '1131776907banner.jpg', 'ar', '2018-09-17 12:43:01', '2018-09-26 13:14:47', '2018-09-26 13:14:47'),
 (69, 32, '1538232837banner - Copy (2).jpg', 'ar', '2018-09-17 12:43:10', '2018-09-17 12:43:10', NULL),
-(70, 32, '1047375831banner - Copy.jpg', 'ar', '2018-09-17 12:43:10', '2018-09-17 12:43:10', NULL);
+(70, 32, '1047375831banner - Copy.jpg', 'ar', '2018-09-17 12:43:10', '2018-09-17 12:43:10', NULL),
+(71, 26, '341560364slider-1.jpg', 'ar', '2018-09-26 13:03:45', '2018-09-26 13:03:45', NULL),
+(72, 27, '812378828slide-2.jpg', 'ar', '2018-09-26 13:09:53', '2018-09-26 13:09:53', NULL),
+(73, 27, '306251258slide-3.jpg', 'ar', '2018-09-26 13:09:53', '2018-09-26 13:09:53', NULL),
+(74, 27, '788257675slider-1.jpg', 'ar', '2018-09-26 13:09:53', '2018-09-26 13:09:53', NULL),
+(75, 28, '101903521property-01-exterior-680x510.jpg', 'ar', '2018-09-26 13:10:14', '2018-09-26 13:10:14', NULL),
+(76, 29, '794889973slide-2.jpg', 'ar', '2018-09-26 13:10:51', '2018-09-26 13:10:51', NULL),
+(77, 29, '1529899077slide-3.jpg', 'ar', '2018-09-26 13:10:52', '2018-09-26 13:10:52', NULL),
+(78, 29, '136024789slider-1.jpg', 'ar', '2018-09-26 13:10:52', '2018-09-26 13:10:52', NULL),
+(79, 40, '821640831slide-3.jpg', 'ar', '2018-09-26 13:15:03', '2018-09-26 13:15:03', NULL),
+(80, 40, '918209242slider-1.jpg', 'ar', '2018-09-26 13:15:03', '2018-09-26 13:15:03', NULL);
 
 -- --------------------------------------------------------
 
@@ -386,7 +396,7 @@ CREATE TABLE `requests` (
 --
 
 INSERT INTO `requests` (`id`, `title`, `body`, `email`, `phone`, `product`, `quantity`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'sdfgds', 'gfdg', 'fdgfd', 'dfg', 'dfg', 'dfgdf', 'fdgdf', '2018-09-23 06:57:41', '2018-09-23 06:57:41', NULL);
+(1, 'sdfgds', 'gfd gsdf gds ', 'fdgfd', 'dfg', 'dfg', 'dfgdf', 'fdgdf', '2018-09-23 06:57:41', '2018-09-23 06:57:41', NULL);
 
 -- --------------------------------------------------------
 
@@ -409,11 +419,11 @@ CREATE TABLE `site_stings` (
 --
 
 INSERT INTO `site_stings` (`id`, `key`, `value`, `lang`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(27, 'Web site name', 'El-Helow Group\r\n', 'ar', '2018-04-05 15:17:11', '2018-09-17 11:11:44', NULL),
+(27, 'Web site name', 'abaza', 'ar', '2018-04-05 15:17:11', '2018-09-17 11:11:44', NULL),
 (31, 'phone', '2011117253016095', 'ar', '2018-04-05 15:17:11', '2018-08-16 09:57:17', NULL),
 (32, 'Mail', 'contact@elhelow.com', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
 (33, 'facebook', 'https://www.facebook.com/', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
-(34, 'About Us', 'Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. ', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
+(34, 'About Us', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\n من نحنت ', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
 (35, 'sub titles', 'Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. ', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
 (36, 'logo', 'logo.png', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
 (37, 'Location', 'Lorem ipsum dolor sit amet consectetur adipisicing.', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
@@ -423,10 +433,12 @@ INSERT INTO `site_stings` (`id`, `key`, `value`, `lang`, `created_at`, `updated_
 (54, 'twitter', 'https://www.twitter.com/', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
 (55, 'linkedin', 'https://www.linkedin.com', 'ar', '2018-04-05 15:17:11', '2018-07-29 10:22:04', NULL),
 (56, 'About Us2', 'كل اللي بتدور عليه في اي منتج بتشتريه هو \" الجودة - الشكل - السعر المناسب \" احنا حققنالك كل ده في اطقم الراتان و البامبو اللي محتاجهم لـ ( التراس - الفيلا - الشالية - الكافيه ....)\r\n\r\nالجودة : خامات طبيعية نفذت في مصنعنا\r\n\r\nالشكل : نفذنا تصميمات جديدة مناسبة لموضة السنة الجديدة\r\n\r\nالسعر : بنقدملك عروض وأسعار مناسبة', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
-(57, 'Mission', 'Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing.\r\n\r\n', 'ar', '2018-04-05 15:17:12', '2018-07-26 07:23:30', NULL),
-(58, 'Vision', 'Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing.\r\n\r\n', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
 (64, 'google_maps', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13807.37692040264!2d31.29403223201093!3d30.098647209800102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fd5fe49af1f%3A0x38b98f00a8c9dcea!2sAl+Qubbaah+Palace%2C+AZ+Zaytoun+Al+Qebleyah%2C+El-Zaytoun%2C+Cairo+Governorate!5e0!3m2!1sen!2seg!4v1537701831996\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
-(65, 'instagram', 'https://www.instagram.com', 'ar', '2018-04-05 15:17:11', '2018-07-29 10:22:04', NULL);
+(65, 'instagram', 'https://www.instagram.com', 'ar', '2018-04-05 15:17:11', '2018-07-29 10:22:04', NULL),
+(66, 'quote', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\n', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
+(68, 'Target', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\nهدف ', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
+(69, 'Vision', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\nرؤيه', 'ar', '2018-04-05 15:17:11', '2018-07-29 10:22:04', NULL),
+(70, 'message', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء رساله  \r\n', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -436,7 +448,7 @@ INSERT INTO `site_stings` (`id`, `key`, `value`, `lang`, `created_at`, `updated_
 
 CREATE TABLE `sliders` (
   `id` int(10) UNSIGNED NOT NULL,
-  `cat_id` int(11) NOT NULL,
+  `cat_id` int(11) DEFAULT NULL,
   `lang` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `single_photo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -450,19 +462,10 @@ CREATE TABLE `sliders` (
 --
 
 INSERT INTO `sliders` (`id`, `cat_id`, `lang`, `single_photo`, `title`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(5, 5, 'ar', '1653971120tree.jpg', 'يبالال لاغفلا', '2018-04-05 13:23:11', '2018-08-16 09:59:34', NULL),
-(6, 1, 'en', '211282532banner - Copy - Copy.jpg', 'frdhd', '2018-04-05 13:23:12', '2018-09-19 07:04:33', NULL),
-(11, 5, 'en', '1653971120tree.jpg', 'Mr. Archibald Anderson DVM', '2018-04-05 13:23:03', '2018-04-05 13:23:03', NULL),
-(12, 2, 'ar', '1653971120tree.jpg', 'يبالال لاغفلا', '2018-04-05 13:23:11', '2018-08-16 09:59:34', NULL),
-(13, 6, 'en', '211282532banner - Copy - Copy.jpg', 'frdhd', '2018-04-05 13:23:12', '2018-09-19 07:04:33', NULL),
-(14, 3, 'en', '1653971120tree.jpg', 'Mr. Archibald Anderson DVM', '2018-04-05 13:23:03', '2018-04-05 13:23:03', NULL),
-(15, 5, 'ar', '1653971120tree.jpg', 'يبالال لاغفلا', '2018-04-05 13:23:11', '2018-08-16 09:59:34', NULL),
-(16, 4, 'en', '211282532banner - Copy - Copy.jpg', 'frdhd', '2018-04-05 13:23:12', '2018-09-19 07:04:33', NULL),
-(17, 6, 'en', '1653971120tree.jpg', 'Mr. Archibald Anderson DVM', '2018-04-05 13:23:03', '2018-04-05 13:23:03', NULL),
-(18, 5, 'ar', '1653971120tree.jpg', 'يبالال لاغفلا', '2018-04-05 13:23:11', '2018-08-16 09:59:34', NULL),
-(19, 6, 'en', '211282532banner - Copy - Copy.jpg', 'frdhd', '2018-04-05 13:23:12', '2018-09-19 07:04:33', NULL),
-(20, 2, 'en', '1653971120tree.jpg', 'Mr. Archibald Anderson DVM', '2018-04-05 13:23:03', '2018-04-05 13:23:03', NULL),
-(21, 4, NULL, '1650642055لوجو-الاباظيه.png', 'dsfgfdg', '2018-09-20 09:29:45', '2018-09-20 09:29:45', NULL);
+(5, 5, 'ar', '1991171399banner.jpg', 'يبالال لاغفلا', '2018-04-05 13:23:11', '2018-09-26 12:59:02', '2018-09-26 12:59:02'),
+(6, 1, 'en', '706010503slider-1.jpg', 'frdhd', '2018-04-05 13:23:12', '2018-09-26 12:53:37', NULL),
+(11, 5, 'en', '1107575438slide-3.jpg', 'Mr. Archibald Anderson DVM', '2018-04-05 13:23:03', '2018-09-26 12:53:44', NULL),
+(22, NULL, NULL, '1373125946banner.jpg', 'fre', '2018-09-26 12:52:35', '2018-09-26 12:52:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -654,13 +657,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories__products`
 --
 ALTER TABLE `categories__products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -672,7 +675,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `n_e_w_s`
 --
 ALTER TABLE `n_e_w_s`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -690,7 +693,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `productsphotos`
 --
 ALTER TABLE `productsphotos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `projects_cats`
@@ -708,13 +711,13 @@ ALTER TABLE `requests`
 -- AUTO_INCREMENT for table `site_stings`
 --
 ALTER TABLE `site_stings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `s_e_r_v_i_c_e_s`

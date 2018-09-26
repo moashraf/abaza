@@ -5,19 +5,7 @@
 </div>
  
  
- 
- 
-<!-- cat_id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('cat_id', 'cat:') !!}
-    <select name="cat_id" class="form-control">
-        @foreach($cat as $category)
-            <option value="{{$category->id}}"> {{$category->title}} </option>
-        @endforeach
-    </select>
 
- </div>
- 
  
  
 <div class="clearfix"></div>

@@ -6,18 +6,44 @@ namespace App\Http\Controllers;
 use App\Models\SERVICE;
  use App\Models\projects_cat;
 use App\Models\NEWS;
+use App\Models\slider;
+use App\Models\clients;
+use App\Models\Products;
  
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
 
-    public function __construct()
+	
+	
+	 public function index()
     {
-        App()->setLocale('ar');
+  $slider = slider::limit(20)->get();
+  $SERVICE = SERVICE::limit(20)->get();
+  $clients = clients::limit(20)->get();
+  $Products_26 = Products::where('cat_id', '=', 26 )->limit(6)->get(); 
+  $Products_27 = Products::where('cat_id', '=', 27 )->limit(6)->get(); 
+  $Products_32 = Products::where('cat_id', '=', 32 )->limit(6)->get(); 
+ 
 
+ 		 return view('main.index',
+            [
+                 'Products_26' => $Products_26 ,  
+                 'Products_27' => $Products_27 ,  
+                 'Products_32' => $Products_32 ,  
+				 'clients' => $clients ,   
+				 'slider' => $slider ,  
+				 'SERVICE' => $SERVICE ,
+            ]);
     }
-
+	
+	
+	
+	
+	
+	
+	
     public function done()
     {
      
@@ -76,15 +102,34 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   
+	
+	
+	
+	
+	 public function video()
     {
- 
- 		 return view('main.index',
+  $SERVICE = SERVICE::limit(12)->get();
+
+ 		 return view('main.video',
             [
                  'SERVICE' => $SERVICE 
             ]);
     }
 	
+	
+	
+	 public function image()
+    {
+  $SERVICE = SERVICE::limit(12)->get();
+
+ 		 return view('main.image',
+            [
+                 'SERVICE' => $SERVICE 
+            ]);
+    }
+	
+	  
 	  
 	
 	

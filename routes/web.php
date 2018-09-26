@@ -17,6 +17,8 @@ Route::resource('/', 'HomeController');
 //Route::post('/form', 'HomeController@form');
 Route::resource('/all_property', 'ProductController');
  Route::get('/news', 'HomeController@news');
+ Route::get('/image', 'HomeController@image');
+ Route::get('/video', 'HomeController@video');
 Route::get('/singel_news/{id}', 'HomeController@singel_news');
 Route::get('/services', 'HomeController@services');
 Route::get('/singel_services/{id}', 'HomeController@singel_services');
@@ -41,7 +43,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function ()
 {
 
-//Route::get('ajax_del_products/{id}/{Product_id}', 'ProductsController@ajax_del_products');
+ Route::get('ajax_del_products/{id}/{Product_id}', 'ProductsController@ajax_del_products');
 	
 Route::resource('/', 'ProductsController');
 Route::resource('products', 'ProductsController');

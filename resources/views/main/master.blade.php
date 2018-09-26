@@ -83,7 +83,7 @@
             <div class="rh_header__wrap">
                <div class="rh_logo">
                   <a title="Real Homes" href="index.html">
-                  <img src="wp-content/uploads/2017/06/logo.png" alt="Real Homes">
+                  <img src="{{ asset('wp-content/uploads/2017/06/logo.png')}}" alt="Real Homes">
                   </a>
                    
                   <!-- /.only-for-print -->
@@ -161,7 +161,7 @@
                            <g></g>
                            <g></g>
                         </svg>
-                        <a href="tel:1-800-555-1234" class="contact-number">1-800-555-1234</a>
+                        <a href="tel:1-800-555-1234" class="contact-number">  {{  site_settings("phone")  }} </a>
                      </div>
                      <!-- /.rh_menu__user_phone -->
                      <!-- /.rh_menu__user_submit -->
@@ -194,7 +194,7 @@
 						
 <div class="rh_footer__logo">
                   <a title="Real Homes" href="index.html">
-                  <img src="wp-content/themes/realhomes/assets/modern/images/logo.png" alt="Real Homes">
+                  <img src="{{ asset('wp-content/themes/realhomes/assets/modern/images/logo.png')}}" alt="Real Homes">
                   </a>
                 </div>
 
@@ -238,7 +238,7 @@
                                     <g></g>
                                  </svg>
                               </p>
-                              <p class="content">46 Abdalla Elaraby st.,Ex. Eltayaran st., Nasr city </p>
+                              <p class="content">   {{  site_settings("Location")  }}  </p>
                            </div>
                            <div class="rh_contact_widget__item rh_contact_widget--alignBaseline">
                               <p class="icon">
@@ -268,7 +268,7 @@
                                     <g></g>
                                  </svg>
                               </p>
-                              <p class="content">+123-456-789</p>
+                              <p class="content">  {{  site_settings("phone")  }} </p>
                            </div>
                            <div class="rh_contact_widget__item rh_contact_widget--alignBaseline">
                               <p class="icon">
@@ -297,8 +297,7 @@
                                     <g></g>
                                  </svg>
                               </p>
-                              <a href="mailto:s&#097;&#108;&#101;s&#064;&#121;o&#117;r&#119;&#101;bs&#105;te.co&#109;" class="content">
-                              sa&#108;&#101;&#115;&#064;y&#111;urweb&#115;it&#101;.&#099;&#111;&#109;					</a>
+                              <a href="mailto: {{  site_settings('Mail')  }};" class="content">  {{  site_settings("Mail")  }}</a>
                            </div>
                         </div>
                         <!-- /.rh_contact_widget -->
@@ -311,24 +310,22 @@
                   <div class="rh_widgets">
                  
   <div class="rh_footer__social">
-                  <a class="facebook" target="_blank" href="https://www.facebook.com/">
+                  <a class="facebook" target="_blank" href="{{  site_settings('facebook')  }}">
                   <i class="fa fa-facebook-official fa-lg"></i>
                   </a>
-                  <a class="twitter" target="_blank" href="https://twitter.com/">
+                  <a class="twitter" target="_blank" href="{{  site_settings('twitter')  }}">
                   <i class="fa fa-twitter fa-lg"></i>
                   </a>
-                  <a class="linkedin" target="_blank" href="https://www.linkedin.com/">
+                  <a class="linkedin" target="_blank" href="{{  site_settings('linkedin')  }}">
                   <i class="fa fa-linkedin-square fa-lg"></i>
                   </a>
                  
-                  <a class="instagram" target="_blank" href="https://www.instagram.com/">
+                  <a class="instagram" target="_blank" href="{{  site_settings('instagram')  }}">
                   <i class="fa fa-instagram fa-lg"></i>
                   </a> 
                </div>
 			   <br><br>
-			    <p class="rh_cta__title"> نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء
-
-				</p>
+			    <p class="rh_cta__title">  {{  site_settings('quote')  }}  </p>
 			   </div>
                   <!-- /.rh_widgets -->
                </div>
