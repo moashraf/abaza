@@ -55,7 +55,21 @@ class NEWSController extends AppBaseController
      */
     public function store(CreateNEWSRequest $request)
     {
-        $input = $request->all();
+$input = $request->all();
+        if (!empty($input['single_photo'])) {
+            $photoexplode = $request->single_photo->getClientOriginalName();
+       $photoexplode = explode(".", $photoexplode);
+       $namerand = rand();
+       $namerand.= $photoexplode[0];
+       $imageNameGallery = $namerand . '.' . $request->single_photo->getClientOriginalExtension();
+       $request->single_photo->move(base_path() . '/public/images/', $imageNameGallery);
+       $input['single_photo']=    $imageNameGallery; 
+      
+       
+       }else{
+       $input['single_photo']=    'logo.png'; 
+           
+       }
 
         $nEWS = $this->nEWSRepository->create($input);
 
@@ -114,7 +128,24 @@ class NEWSController extends AppBaseController
      */
     public function update($id, UpdateNEWSRequest $request)
     {
-        $nEWS = $this->nEWSRepository->findWithoutFail($id);
+        $input = $request->all();
+        if (!empty($input['single_photo'])) {
+            $photoexplode = $request->single_photo->getClientOriginalName();
+       $photoexplode = explode(".", $photoexplode);
+       $namerand = rand();
+       $namerand.= $photoexplode[0];
+       $imageNameGallery = $namerand . '.' . $request->single_photo->getClientOriginalExtension();
+       $request->single_photo->move(base_path() . '/public/images/', $imageNameGallery);
+       $input['single_photo']=    $imageNameGallery; 
+      
+       
+       }else{
+       $input['single_photo']=    'logo.png'; 
+           
+       }
+
+	   
+	   $nEWS = $this->nEWSRepository->findWithoutFail($id);
 
         if (empty($nEWS)) {
             Flash::error('N E W S not found');
@@ -122,7 +153,7 @@ class NEWSController extends AppBaseController
             return redirect(route('nEWS.index'));
         }
 
-        $nEWS = $this->nEWSRepository->update($request->all(), $id);
+        $nEWS = $this->nEWSRepository->update( $input, $id);
 
         Flash::success('N E W S updated successfully.');
 

@@ -57,6 +57,11 @@ Route::resource('clients', 'clientsController');
 Route::resource('orders', 'orderController');
 Route::resource('projectsCats', 'projects_catController');
 Route::resource('requests', 'requestController');
+
+
+Route::resource('videos', 'videoController');
+
+Route::resource('images', 'imageController');
 });
 
 

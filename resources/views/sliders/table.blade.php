@@ -3,7 +3,7 @@
         <tr>
         <th>Title</th>
         
-        <th>Single Photo</th>
+        <th>  Photo</th>
          
        <th colspan="3">Action</th>
         </tr>

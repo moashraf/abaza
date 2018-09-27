@@ -3,16 +3,17 @@
 @section('content')
     <section class="content-header">
         <h1>
-sliders        </h1>
+            Video
+        </h1>
    </section>
    <div class="content">
        @include('adminlte-templates::common.errors')
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($slider, ['route' => ['sliders.update', $slider->id], 'method' => 'patch' ,'files' => true,'enctype' => 'multipart/form-data' ]) !!}
+                   {!! Form::model($video, ['route' => ['videos.update', $video->id], 'method' => 'patch']) !!}
 
-                        @include('sliders.fields')
+                        @include('videos.fields')
 
                    {!! Form::close() !!}
                </div>

@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            N E W S
+            Image
         </h1>
     </section>
     <div class="content">
@@ -12,9 +12,9 @@
 
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'nEWS.store' ,'files' => true,'enctype' => 'multipart/form-data' ]) !!}
+                    {!! Form::open(['route' => 'images.store' ,'files' => true,'enctype' => 'multipart/form-data' ]) !!}
 
-                        @include('n_e_w_s.fields')
+                        @include('images.fields')
 
                     {!! Form::close() !!}
                 </div>

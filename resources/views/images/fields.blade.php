@@ -15,14 +15,20 @@
     {!! Form::label('single_photo', 'Single Photo:') !!}
     {!! Form::file('single_photo') !!}
 </div>
-<!-- Slug Field -->
+<!-- Type Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('slug', 'Slug:') !!}
-    {!! Form::text('slug', null, ['class' => 'form-control']) !!}
+    {!! Form::label('type', 'Type:') !!}
+    {!! Form::text('type', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Link Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('link', 'Link:') !!}
+    {!! Form::text('link', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('nEWS.index') !!}" class="btn btn-default">Cancel</a>
+    <a href="{!! route('images.index') !!}" class="btn btn-default">Cancel</a>
 </div>

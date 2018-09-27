@@ -192,7 +192,7 @@ class HomeController extends Controller
     {
  
  $SERVICE = SERVICE::limit(12)->get();
-		 return view('main.contact',
+		 return view('main.Contact',
             [
                  'SERVICE' => $SERVICE 
             ]);

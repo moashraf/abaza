@@ -11,7 +11,7 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($nEWS, ['route' => ['nEWS.update', $nEWS->id], 'method' => 'patch']) !!}
+                   {!! Form::model($nEWS, ['route' => ['nEWS.update', $nEWS->id], 'method' => 'patch' ,'files' => true,'enctype' => 'multipart/form-data'  ]) !!}
 
                         @include('n_e_w_s.fields')
 

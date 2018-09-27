@@ -3,9 +3,8 @@
         <tr>
             <th>Title</th>
         <th>Body</th>
-        <th>Single Photo</th>
-        <th>Slug</th>
-            <th colspan="3">Action</th>
+        <th>  Photo</th>
+             <th colspan="3">Action</th>
         </tr>
     </thead>
     <tbody>
@@ -13,9 +12,9 @@
         <tr>
             <td>{!! $nEWS->title !!}</td>
             <td>{!! $nEWS->body !!}</td>
-            <td>{!! $nEWS->single_photo !!}</td>
-            <td>{!! $nEWS->slug !!}</td>
-            <td>
+ 			              <td>     <img src="{{ URL::to('/').'/images/'.$nEWS->single_photo}}"  width="50" height="50">  </td>
+
+             <td>
                 {!! Form::open(['route' => ['nEWS.destroy', $nEWS->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
                     <a href="{!! route('nEWS.show', [$nEWS->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>

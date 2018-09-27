@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreaterequestsTable extends Migration
+class CreatevideosTable extends Migration
 {
 
     /**
@@ -13,15 +13,12 @@ class CreaterequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('requests', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->text('body');
-            $table->string('email');
-            $table->string('phone');
-            $table->string('product');
-            $table->string('quantity');
-            $table->string('status');
+            $table->text('single_photo');
+            $table->text('type');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +31,6 @@ class CreaterequestsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('requests');
+        Schema::drop('videos');
     }
 }
