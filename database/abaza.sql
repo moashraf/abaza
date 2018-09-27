@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2018 at 06:07 PM
+-- Generation Time: Sep 27, 2018 at 10:59 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.13
 
@@ -167,7 +167,10 @@ CREATE TABLE `n_e_w_s` (
 --
 
 INSERT INTO `n_e_w_s` (`id`, `title`, `body`, `single_photo`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '', 'dsf', 'dsf', 'dsf', NULL, NULL, NULL);
+(1, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL),
+(2, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL),
+(3, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL),
+(4, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -424,7 +427,7 @@ INSERT INTO `site_stings` (`id`, `key`, `value`, `lang`, `created_at`, `updated_
 (32, 'Mail', 'contact@elhelow.com', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
 (33, 'facebook', 'https://www.facebook.com/', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
 (34, 'About Us', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\n من نحنت ', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
-(35, 'sub titles', 'Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing. ', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
+(35, 'mop', '040215020202', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
 (36, 'logo', 'logo.png', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
 (37, 'Location', 'Lorem ipsum dolor sit amet consectetur adipisicing.', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
 (38, 'working time', '  \r\nالمواعيد من 09:00 ص الي 05:00 م كل يوم ماعدا الجمعة  ', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
@@ -438,7 +441,9 @@ INSERT INTO `site_stings` (`id`, `key`, `value`, `lang`, `created_at`, `updated_
 (66, 'quote', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\n', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
 (68, 'Target', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\nهدف ', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
 (69, 'Vision', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\nرؤيه', 'ar', '2018-04-05 15:17:11', '2018-07-29 10:22:04', NULL),
-(70, 'message', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء رساله  \r\n', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL);
+(70, 'message', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء رساله  \r\n', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
+(71, 'Location2', 'Lorem ipsum dolor sit amet consectetur adipisicing.', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
+(72, 'google_maps2', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13807.37692040264!2d31.29403223201093!3d30.098647209800102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fd5fe49af1f%3A0x38b98f00a8c9dcea!2sAl+Qubbaah+Palace%2C+AZ+Zaytoun+Al+Qebleyah%2C+El-Zaytoun%2C+Cairo+Governorate!5e0!3m2!1sen!2seg!4v1537701831996\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -489,12 +494,12 @@ CREATE TABLE `s_e_r_v_i_c_e_s` (
 --
 
 INSERT INTO `s_e_r_v_i_c_e_s` (`id`, `title`, `slug`, `single_photo`, `body`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(5, 'fgjhgj', 'hgjhg', '2070772461service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.\r\n\r\n', '2018-09-18 09:18:04', '2018-09-19 10:40:50', NULL),
-(7, 'fgjhgj', 'hgjhg', '2070772461service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.\r\n\r\n', '2018-09-18 09:19:24', '2018-09-18 09:19:24', NULL),
-(9, 'fgjhgj', 'hgjhg', '2070772461service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.\r\n\r\n', '2018-09-18 09:21:51', '2018-09-18 09:21:51', NULL),
-(10, 'fgjhgj', 'hgjhg', '2070772461service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.\r\n\r\n', '2018-09-18 09:22:13', '2018-09-18 09:22:13', NULL),
-(11, 'fgjhgj', 'hgjhg', '2070772461service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.\r\n\r\n', '2018-09-18 09:22:50', '2018-09-18 09:22:50', NULL),
-(12, 'fgjhgj', 'hgjhg', '2070772461service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.\r\n\r\n', '2018-09-18 09:23:23', '2018-09-18 09:23:23', NULL);
+(5, 'fgjhgj', 'hgjhg', '711399538service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:18:04', '2018-09-27 06:30:59', NULL),
+(7, 'fgjhgj', 'hgjhg', '1705457974service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:19:24', '2018-09-27 06:31:10', NULL),
+(9, 'fgjhgj', 'hgjhg', '1137738363service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:21:51', '2018-09-27 06:31:15', NULL),
+(10, 'fgjhgj', 'hgjhg', '248553533service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:22:13', '2018-09-27 06:31:20', NULL),
+(11, 'fgjhgj', 'hgjhg', '316657210service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:22:50', '2018-09-27 06:31:25', NULL),
+(12, 'fgjhgj', 'hgjhg', '1633036904service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:23:23', '2018-09-27 06:31:31', NULL);
 
 -- --------------------------------------------------------
 
@@ -657,7 +662,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories__products`
 --
 ALTER TABLE `categories__products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `clients`
@@ -675,7 +680,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `n_e_w_s`
 --
 ALTER TABLE `n_e_w_s`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -711,7 +716,7 @@ ALTER TABLE `requests`
 -- AUTO_INCREMENT for table `site_stings`
 --
 ALTER TABLE `site_stings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `sliders`

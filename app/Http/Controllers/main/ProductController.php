@@ -24,7 +24,7 @@ class ProductController extends Controller
     public function index()
     {
       $Categories_Products = Categories_Products::limit(50)->get();
-       $Products = Products::paginate(9);
+       $Products = Products::paginate(12);
         return view('main.all_property', 
             [
              'Categories_Products' => $Categories_Products, 

@@ -121,7 +121,7 @@ class HomeController extends Controller
 	
 	 public function image()
     {
-  $SERVICE = SERVICE::limit(12)->get();
+  $SERVICE = SERVICE::limit(50)->get();
 
  		 return view('main.image',
             [
@@ -137,10 +137,10 @@ class HomeController extends Controller
 	   public function news()
     {
  
- $SERVICE = SERVICE::limit(12)->get();
+ $NEWS = NEWS::limit(50)->get();
 		 return view('main.news',
             [
-                 'SERVICE' => $SERVICE 
+                 'NEWS' => $NEWS 
             ]);
     }
 	

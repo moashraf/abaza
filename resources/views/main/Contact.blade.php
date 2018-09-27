@@ -39,7 +39,7 @@
 
 					<div class="rh_contact__form">
 															<section id="contact-form">
-										<form class="contact-form" method="post" action="http://modern.realhomes.io/wp-admin/admin-ajax.php">
+										<form class="contact-form" method="post" action="#">
 											<p class="rh_contact__input rh_contact__input_text">
  												<input type="text" name="name" id="name" class="required" placeholder="الاسم   " title="* Please provide your name">
 											</p>
@@ -75,10 +75,10 @@
  				<!-- /.name -->
 
 				<div class="social">
-							                <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook-official fa-lg"></i></a>
-		                		                <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-		                		                <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin-square fa-lg"></i></a>
- 		                		                <a target="_blank" href="https://www.pinterest.com/"><i class="fa fa-instagram fa-lg"></i></a>
+							                <a target="_blank" href=" {{ site_settings('facebook')  }}"><i class="fa fa-facebook-official fa-lg"></i></a>
+		                		                <a target="_blank" href="{{ site_settings('twitter')  }}"><i class="fa fa-twitter fa-lg"></i></a>
+		                		                <a target="_blank" href="{{ site_settings('linkedin')  }}"><i class="fa fa-linkedin-square fa-lg"></i></a>
+ 		                		                <a target="_blank" href="{{ site_settings('instagram')  }} "><i class="fa fa-instagram fa-lg"></i></a>
 		                				</div>
 				<!-- /.social -->
 
@@ -126,7 +126,7 @@
 </g>
 </svg>
 </p>
-										<p class="content"> <span class="label">الهاتف </span> +123-456-789 </p>
+										<p class="content"> <span class="label">الهاتف </span>  {!! site_settings('phone')  !!}    </p>
 									</div>
 								
 																	<div class="rh_contact__item">
@@ -198,8 +198,7 @@
 </svg>
 </p>
 										<p class="content">
-											<span class="label">محمول </span>
-											+133-456-787										</p>
+											<span class="label">محمول </span>  {!! site_settings('mop')  !!}  </p>
 									</div>
 								 <div class="rh_contact__item">
 										<p class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -244,7 +243,7 @@
 </p>
 										<p class="content">
 											<span class="label">البريد </span>
-											<a href="mailto:abaza@abaza.com;"> abaza@abaza.com</a>
+											<a href="mailto:  {!! site_settings('Mail')  !!} ;">   {!! site_settings('Mail')  !!}  </a>
 										</p>
 									</div>
 								
@@ -292,8 +291,7 @@
 </svg>
 </p>
 										<p class="content">
-											<span class="label">العنوان </span>
-											3015 Grand Ave, Coconut Grove, Merrick Way, FL 12345										</p>
+											<span class="label">العنوان </span>   {!! site_settings('Location')  !!}   </p>
 									</div>					<div class="rh_contact__item">
 										<p class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="20px" height="30px" viewBox="0 0 425.963 425.963" style="enable-background:new 0 0 425.963 425.963;"
@@ -338,8 +336,7 @@
 </svg>
 </p>
 										<p class="content">
-											<span class="label">العنوان </span>
-											3015 Grand Ave, Coconut Grove, Merrick Way, FL 12345										</p>
+											<span class="label">العنوان </span>  {!! site_settings('Location2')  !!} 	</p>
 									</div>
 															<br><br><br>
 
@@ -353,11 +350,11 @@
 							
 							
 					<div class=" rh_contact__form">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7533455105213!2d31.234477115115155!3d30.043933381882475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840e582b61f9d%3A0xad7472def3c5066!2sGoogle!5e0!3m2!1sen!2seg!4v1537957573805" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+					 {!! site_settings('google_maps')  !!} 
   	</div>
 					
 					<div class="rh_contact__details">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.7533455105213!2d31.234477115115155!3d30.043933381882475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840e582b61f9d%3A0xad7472def3c5066!2sGoogle!5e0!3m2!1sen!2seg!4v1537957573805" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+					 {!! site_settings('google_maps2')  !!} 
   	</div>
 					<!-- /.rh_contact__map -->
 

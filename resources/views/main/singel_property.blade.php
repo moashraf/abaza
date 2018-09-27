@@ -15,7 +15,7 @@
 
 		<div class="rh_banner__wrap">
 
-			<h2 class="rh_banner__title"> كمبوند رودس العاصمة الادارية  </h2>
+			<h2 class="rh_banner__title"> {{$Products->name}}    </h2>
 			<!-- /.rh_banner__title -->
 
 		</div>
@@ -35,7 +35,7 @@
 
 	<div class="rh_page__property_title">
 
-		<h1 class="rh_page__title">  كمبوند رودس العاصمة الادارية  </h1>
+		<h1 class="rh_page__title">  {{$Products->name}}  </h1>
 		<!-- /.rh_page__title -->
  
 
@@ -47,7 +47,7 @@
 	<div class="rh_page__property_price">
 		 
 		<!-- /.status -->
-		<p class="price"> مشروعات حاليه </p>
+		<p class="price"> {{$Products->get_cat_data['title']}}  </p>
 		<!-- /.price -->
 	</div>
 	<!-- /.rh_page__property_price -->
@@ -60,12 +60,19 @@
 								<div id="property-detail-flexslider" class="clearfix">
 		<div class="flexslider">
 			<ul class="slides">
-				<li><a href="../wp-content/uploads/2015/07/property-10-exterior.jpg" class="swipebox" rel="gallery_real_homes" >
-				<img src="../wp-content/uploads/2015/07/property-10-exterior.jpg" alt="property-10-exterior" /></a></li><li>
-				<a href="../wp-content/uploads/2015/07/luxury-living-room.jpg" class="swipebox" rel="gallery_real_homes" >
-				<img src="../wp-content/uploads/2015/07/luxury-living-room.jpg" alt="luxury-living-room" /></a></li><li>
-				<a href="../wp-content/uploads/2017/06/luxury-bedroom.jpg" class="swipebox" rel="gallery_real_homes" >
-				<img src="../wp-content/uploads/2017/06/luxury-bedroom.jpg" alt="luxury-bedroom" /></a></li>			</ul>
+			
+			
+			
+			   @foreach($Products->get_Product_Photos as $Products_val_Photos )
+				<li>
+				<a href="#" class="swipebox" rel="gallery_real_homes" >
+				<img src="{{ URL::to('/').'/images/'.$Products_val_Photos->Photo}} " alt="property-10-exterior" />
+				</a>
+				</li>
+				
+				   @endforeach
+				
+				</ul>
 		</div>
 	</div>
 			<div id="property-featured-image" class="clearfix only-for-print">
@@ -132,11 +139,11 @@
 </div>
 <!-- /.rh_property__row rh_property__meta -->
 
-	<h4 class="rh_property__heading">Description</h4>
+	<h4 class="rh_property__heading">  {{$Products->name}}  </h4>
 	<!-- /.rh_property__heading -->
 
 	<div class="rh_content">
-		<p>Beautiful home on quiet, tree lined street. Addition and renovation create desirable layout with gracious master suite, oversized walk-in closet and lovely bathroom! Formal living room with working fireplace and French doors open to gorgeous, lushly landscaped yard. Home features formal dining room, elegant kitchen with wood beamed ceilings, bright breakfast room off family room overlooking magnificent pool and patio. Details like crown molding, coral rock wall, marble and hardwood floors, tumbled marble driveway and lovely front porch create wonderful ambiance.</p>
+		<p>  {{$Products->body}}  </p>
 	</div>
 	
 </div>
@@ -153,41 +160,41 @@
 					<div class="rh_property_agent__agent_info">
 							
 								<p class="contact mobile">
-					Mobile : <span class="value">1-234-456-7893</span>
+					هاتف : <span class="value">  {{  site_settings("phone")  }} </span>
 				</p>
 							
 								<p class="contact email">
-					Email : <a href="mailto:&#114;&#111;&#098;&#111;t&#064;insp&#105;&#114;&#121;t&#104;&#101;&#109;&#101;s.co&#109;" class="value">&#114;&#111;&#098;ot&#064;ins&#112;&#105;r&#121;&#116;&#104;em&#101;&#115;&#046;&#099;&#111;m</a>
+					بريد : <a href="mailto: {{  site_settings('Mail')  }};" class="value"> {{  site_settings('Mail')  }} </a>
 				</p>
 						</div>
 					<a class="rh_btn rh_btn--primary rh_property_agent__link" href="#">تواصل معنا </a>
 		
 						<div class="rh_property_agent__enquiry_form">
-					<form id="agent-form-id57" class="rh_widget_form agent-form" method="post" action="http://modern.realhomes.io/wp-admin/admin-ajax.php">
+						
+						
+					<form id="agent-form-id57" class="rh_widget_form agent-form" method="post" action="#">
 						<p class="rh_widget_form__row">
-							<label for="name">Name</label>
-							<input type="text" name="name" placeholder="Name" class="required" title="* Please provide your name" />
+ 							<input type="text" name="name" placeholder="Name" class="required" title="* Please provide your name" />
 						</p>
 						<!-- /.rh_widget_form__row -->
 						<p class="rh_widget_form__row">
-							<label for="email">Email</label>
-							<input type="text" name="email" placeholder="Email" class="required" title="* Please provide valid email address" />
+ 							<input type="text" name="email" placeholder="Email" class="required" title="* Please provide valid email address" />
 						</p>
 						<!-- /.rh_widget_form__row -->
 						<p class="rh_widget_form__row">
-							<label for="phone">Phone</label>
-							<input type="text" name="phone" placeholder="Phone" class="required" title="* Please provide valid phone number" />
+ 							<input type="text" name="phone" placeholder="Phone" class="required" title="* Please provide valid phone number" />
 						</p>
 						<!-- /.rh_widget_form__row -->
 						<p class="rh_widget_form__row">
-							<label for="message">Message</label>
-							<textarea cols="40" rows="6" type="text" name="message" placeholder="Message" class="required" title="* Please provide your message"></textarea>
-						</p>
-						<!-- /.rh_widget_form__row -->
-												<input type="submit" value="Send Message" name="submit" class="rh_btn rh_btn--primary rh_widget_form__submit">
+ 							<textarea cols="40" rows="6" type="text" name="message" placeholder="Message" class="required" title="* Please provide your message"></textarea>
+						</p> 
+						<input type="submit" value="  ارسل " name="submit" class="rh_btn rh_btn--primary rh_widget_form__submit">
 
 
 					</form>
+					
+					
+					
 				</div>
 				<!-- /.rh_property_agent__enquiry_form -->
  </section>

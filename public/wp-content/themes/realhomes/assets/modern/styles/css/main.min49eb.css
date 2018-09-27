@@ -1,4 +1,7 @@
 /*! Real Homes Styles This file includes 1. Core theme styles 2. Theme's responsive styles *//*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+	
+	.pagination{ list-style: none;
+    display: -webkit-inline-box; }
 	html{direction: rtl;}
 .rh_content p{text-align: right;}
 	.rh_logo img {
