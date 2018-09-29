@@ -36,13 +36,10 @@ class Products extends Model
         'name',
         'body',
         'single_photo',
-         'Material',
-         'Dimentions',
+         'Rooms',
+         'Area',
          'Colors',
-        'component',
-        'Net_weight',
-        'Note',
-        'Packing_content',
+        'bathroom',
         'cat_id',
         'lang',
         'slug'
@@ -83,7 +80,7 @@ class Products extends Model
       //  'Packing_content' => 'required|min:1',
         'cat_id' => 'required|min:1',
       //  'lang' => 'required|min:1',
-        'slug' => 'required|min:1'
+   //     'slug' => 'required|min:1'
     ];
 
 

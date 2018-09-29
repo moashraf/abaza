@@ -39,30 +39,32 @@
 
 					<div class="rh_contact__form">
 															<section id="contact-form">
-										<form class="contact-form" method="post" action=" ">
-										
-											<p class="rh_contact__input rh_contact__input_text">
- 												<input type="text" name="name" id="name" class="required" placeholder="الاسم   " title="* Please provide your name">
+										 {!! Form::open( [ 'route' =>  'orders', 'method' => 'post'] ) !!}
+
+<input type="hidden" name="status"   value=" طلب وحدتك   " />
+
+
+ <p class="rh_contact__input rh_contact__input_text">
+ 												<input type="text" name="title" id="name"  requiredclass="required"  required  placeholder="الاسم   " title="* Please provide your name">
 											</p>
 
 											<p class="rh_contact__input rh_contact__input_text">
- 												<input type="text" name="email" id="email" class="email required" placeholder=" البريد  " title="* Please provide a valid email address">
+ 												<input type="text" name="email" id="email" class="email required"  required  placeholder=" البريد  " title="* Please provide a valid email address">
 											</p>
 
 											<p class="rh_contact__input rh_contact__input_text">
- 												<input type="text" name="number" id="number" placeholder=" الهاتف   ">
-											</p>	
-											 <p class="rh_contact__input rh_contact__input_textarea">
- 												<textarea cols="20" rows="3" name="message" id="comment" class="required" placeholder=" تفاصيل الوحده   " title="* Please provide your message"></textarea>
+ 												<input  required  type="text" name="phone" id="number" placeholder=" الهاتف   ">
+											</p>
+
+											<p class="rh_contact__input rh_contact__input_textarea">
+ 												<textarea cols="20" rows="3" name="body" id="comment" class="required" required  placeholder=" تفاصيل الوحده  المطلوبه   " title="* Please provide your message"></textarea>
 											</p>
 											
 											<p class="rh_contact__input rh_contact__submit">
 												<input type="submit" id="submit-button" value=" ارسل " class="rh_btn rh_btn--primary" name="submit">
 										 </p>
 
-											<div id="error-container"></div>
-											<div id="message-container"></div>
-										</form>
+ 										</form> 
 									</section>
 														</div>
 					<!-- /.rh_contact__form -->

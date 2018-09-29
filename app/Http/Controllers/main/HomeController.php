@@ -9,6 +9,9 @@ use App\Models\NEWS;
 use App\Models\slider;
 use App\Models\clients;
 use App\Models\Products;
+use App\Models\order;
+use App\Models\image;
+use App\Models\video;
  
 use Illuminate\Http\Request;
 
@@ -16,6 +19,31 @@ class HomeController extends Controller
 {
 
 	
+
+
+  public function singel_cat($id)
+    {
+      $Categories_Products = Categories_Products::where('id' ,'=', $id)->get();
+	  if(  !$Categories_Products->isEmpty()   ){  
+
+  $Products = Products::where('cat_id','=',$Categories_Products[0]['id'])->paginate(20);
+        return view('main.all_property', 
+            [
+             'Categories_Products' => $Categories_Products, 
+               'Products' => $Products, 
+             ]);
+  // dd(    $Categories_Products[0]['id']); 
+   
+   }else{
+	   
+	   
+	    return redirect('/');
+ 
+   }
+	 
+     
+    }
+
 	
 	 public function index()
     {
@@ -67,8 +95,9 @@ class HomeController extends Controller
 
         $order = order::create($input);
 
- 
-        return redirect(route('done'));
+ 	    return redirect('/');
+
+       // return redirect(route('done'));
     }
 	
 	
@@ -109,11 +138,12 @@ class HomeController extends Controller
 	
 	 public function video()
     {
-  $SERVICE = SERVICE::limit(12)->get();
+		
+    $video = video::limit(50)->get();
 
  		 return view('main.video',
             [
-                 'SERVICE' => $SERVICE 
+                 'video' => $video 
             ]);
     }
 	
@@ -121,11 +151,11 @@ class HomeController extends Controller
 	
 	 public function image()
     {
-  $SERVICE = SERVICE::limit(50)->get();
+  $image = image::limit(50)->get();
 
  		 return view('main.image',
             [
-                 'SERVICE' => $SERVICE 
+                 'image' => $image 
             ]);
     }
 	

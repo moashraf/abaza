@@ -99,20 +99,51 @@
                      </div>
                      <div class="menu-main-menu-container">
                         <ul id="menu-main-menu" class="rh_menu__main clearfix">
-                           <li id="menu-item-4403" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4403"><a href="#">الرئيسية</a></li>
+                           <li id="menu-item-4403" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4403">
+						   <a href="{{ URL::to('/')}}">الرئيسية</a></li>
                            <li id="menu-item-4411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4411">
-                              <a href="#">المشاريع </a>
+                              <a href="{{ URL::to('/').'/all_property/' }}">المشاريع </a>
                               <ul class="sub-menu">
-                                 <li id="menu-item-4409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4409"><a href="#"> مشاريع تحت الانشاء  </a></li>
-                                 <li id="menu-item-4408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4408"><a href="#">   مشاريع حالية </a></li>
-<li id="menu-item-5533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533"><a href="#"> مشاريع سابقة </a></li>                              </ul>
+                                 <li id="menu-item-4409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4409">
+								 <a href="{{ URL::to('/').'/singel_cat/32' }}">     تابع مشروعك   </a></li>
+ 
+                                 <li id="menu-item-4408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4408">
+								 <a href="{{ URL::to('/').'/singel_cat/26' }}">   مشاريع حالية </a></li>
+									<li id="menu-item-5533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533">
+									<a href="{{ URL::to('/').'/singel_cat/27' }}"> مشاريع سابقة </a></li>                              </ul>
                            </li>
-                           <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395"><a href="#">من نحن </a></li>
-                           <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395"><a href="#">جديد الشركة </a></li>
-                           <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395"><a href="#">خدمات الشركة  </a></li>
-                           <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395"><a href="#">    اطلب وحدتك </a></li>
-                           <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395"><a href="#">    تابع مشروعك </a></li>
-                         </ul>
+                           <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395"><a href="{{ URL::to('/').'/About/' }}">من نحن </a></li>
+                           <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395"><a href="{{ URL::to('/').'/news/' }}">جديد الشركة </a></li>
+                           <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395"><a href="{{ URL::to('/').'/services/' }}">خدمات الشركة  </a></li>
+                         
+
+
+
+
+ <li id="menu-item-4411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4411">
+                              <a href="#">المعرض </a>
+                              <ul class="sub-menu">
+                               
+ 
+                                 <li id="menu-item-4408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4408">
+								 <a href="{{ URL::to('/').'/image' }}">    صور  </a></li>
+									<li id="menu-item-5533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5533">
+									<a href="{{ URL::to('/').'/video' }}"> فيديو    </a></li>                              </ul>
+                           </li>
+
+						    <li id="menu-item-4411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4411">
+                              <a href="{{ URL::to('/').'/Contact/' }}">  اتصل بنا  </a>
+                              <ul class="sub-menu">
+                                 <li id="menu-item-4409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4409">
+								 <a href="{{ URL::to('/').'/orders/' }}">    اطلب وحدتك </a>
+								 </li>
+ 
+                                                 
+									</ul>
+                           </li>
+						   
+						   
+						   </ul>
                      </div>
                      <div class="menu-main-menu-container">
                         <ul id="menu-main-menu-1" class="rh_menu__responsive clearfix">

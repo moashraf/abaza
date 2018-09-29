@@ -37,75 +37,19 @@
          <div class="rh_page">
             <div class="rh_gallery">
                <div class="rh_gallery__wrap isotope">
+			   
+			      @foreach($video as $Products_val)
+
                   <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>  <div class="rh_gallery__item isotope-item rh_gallery--4-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/qsekncoKXq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					
-                     
-                  </div>
+			   <h3 style="    padding: 15px;"> 				  {!!  $Products_val->title   !!}				  </h3>
+
+				  {!!  $Products_val->link   !!}				  
+                      
+                  </div> 
+ 
+
+				      @endforeach
+
 				  
 				  </div>
                <!-- /.rh_gallery__wrap isotope -->

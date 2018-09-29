@@ -88,23 +88,27 @@
 <br>
  <div class="container">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img  src="http://localhost/abaza/public/wp-content/uploads/2017/06/slider-1.jpg"  id="expandedImg" style="width:100%">
+  <img   src=""  id="expandedImg" style="width:100%">
   <div id="imgtext"></div>
 </div>
 
  <div class="row">
+ 
+ 
+ 
+ 
+   @foreach($image as $Products_val)
+
   <div class="column">
-    <img src="http://localhost/abaza/public/wp-content/uploads/2017/06/slider-1.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="http://localhost/abaza/public/wp-content/uploads/2017/06/slider-1.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="http://localhost/abaza/public/wp-content/uploads/2017/06/slider-1.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="http://localhost/abaza/public/wp-content/uploads/2017/06/slider-1.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-  </div>
+  <a href="#expandedImg" >
+    <img src="{{ URL::to('/').'/images/'.$Products_val->single_photo}} " alt="Nature" style="width:100%" onclick="myFunction(this);">
+
+</a>	</div>
+ 
+ 
+    @endforeach
+
+ 
 </div>
 
 

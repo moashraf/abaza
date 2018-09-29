@@ -3,6 +3,37 @@
     {!! Form::label('name', 'Name:') !!}
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
+<!-- cat_id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('cat_id', 'cat:') !!}
+    <select name="cat_id" class="form-control">
+        @foreach($cat as $category)
+            <option value="{{$category->id}}"> {{$category->title}} </option>
+        @endforeach
+    </select>
+
+ </div>
+
+ 
+
+<div class="form-group col-sm-4">
+    {!! Form::label('Area', 'Area:') !!}
+    {!! Form::text('Area', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group col-sm-4">
+    {!! Form::label('Rooms', 'Rooms:') !!}
+    {!! Form::text('Rooms', null, ['class' => 'form-control']) !!}
+</div>
+
+
+<div class="form-group col-sm-4">
+    {!! Form::label('bathroom', 'bathroom:') !!}
+    {!! Form::text('bathroom', null, ['class' => 'form-control']) !!}
+</div>
+
+
+
 
 <!-- Body Field -->
 <div class="form-group col-sm-12 col-lg-12">
@@ -23,23 +54,9 @@
     
 </div>
 <!-- Slug Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('slug', 'Slug:') !!}
-    {!! Form::text('slug', null, ['class' => 'form-control']) !!}
-</div>
 
  
 
-<!-- cat_id Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('cat_id', 'cat:') !!}
-    <select name="cat_id" class="form-control">
-        @foreach($cat as $category)
-            <option value="{{$category->id}}"> {{$category->title}} </option>
-        @endforeach
-    </select>
-
- </div>
 
 
 <!-- Submit Field -->

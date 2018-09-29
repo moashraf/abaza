@@ -16,7 +16,9 @@
 Route::resource('/', 'HomeController');
 //Route::post('/form', 'HomeController@form');
 Route::resource('/all_property', 'ProductController');
- Route::get('/news', 'HomeController@news');
+Route::get('/singel_cat/{id}', 'HomeController@singel_cat');
+
+  Route::get('/news', 'HomeController@news');
  Route::get('/singel_news/{id}', 'HomeController@singel_news');
  Route::get('/image', 'HomeController@image');
  Route::get('/video', 'HomeController@video');
@@ -24,7 +26,7 @@ Route::get('/services', 'HomeController@services');
 Route::get('/singel_services/{id}', 'HomeController@singel_services');
 Route::get('/orders', 'HomeController@orders_get');
 
-Route::post('/orders', 'HomeController@orders');
+Route::post('/orders', 'HomeController@orders')->name('orders');
 
 Route::get('/About', 'HomeController@About');
 Route::get('/Contact', 'HomeController@Contact');

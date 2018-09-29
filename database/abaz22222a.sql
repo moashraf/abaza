@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 27, 2018 at 10:59 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.1.13
+-- Generation Time: Sep 29, 2018 at 09:19 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.1.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -88,6 +88,40 @@ INSERT INTO `clients` (`id`, `title`, `body`, `slug`, `single_photo`, `created_a
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `images`
+--
+
+CREATE TABLE `images` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci,
+  `single_photo` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` text COLLATE utf8mb4_unicode_ci,
+  `link` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `title`, `body`, `single_photo`, `type`, `link`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'بيلابل', 'بلال', '160318462kitchen.jpg', 'بلالبا', 'لبابلا', '2018-09-27 09:38:59', '2018-09-27 10:07:35', NULL),
+(2, NULL, NULL, '48941210drawing-room.jpg', NULL, NULL, '2018-09-27 09:39:50', '2018-09-27 10:07:18', NULL),
+(3, NULL, NULL, '1098838510drawing-room.jpg', NULL, NULL, '2018-09-27 09:43:13', '2018-09-27 10:07:24', NULL),
+(4, 'بيلابل', 'بلال', '160318462kitchen.jpg', 'بلالبا', 'لبابلا', '2018-09-27 09:38:59', '2018-09-27 10:07:35', NULL),
+(5, NULL, NULL, '48941210drawing-room.jpg', NULL, NULL, '2018-09-27 09:39:50', '2018-09-27 10:07:18', NULL),
+(6, NULL, NULL, '1098838510drawing-room.jpg', NULL, NULL, '2018-09-27 09:43:13', '2018-09-27 10:07:24', NULL),
+(7, 'frdhd', 'رءؤىلار', '276988489luxury-bedroom.jpg', 'لارىلار', 'رلاىلار', '2018-09-27 10:08:27', '2018-09-27 10:08:27', NULL),
+(8, 'frdhd', 'رءؤىلار', '790470243luxury-bedroom.jpg', 'لارىلار', 'رلاىلار', '2018-09-27 10:08:28', '2018-09-27 10:08:28', NULL),
+(9, 'fg', 'بلتالت', '523507056slider-1.jpg', 'ابتال', 'تلات', '2018-09-27 10:09:19', '2018-09-27 10:09:19', NULL),
+(10, 'سيبيس', 'يسب', '485527825kitchen.jpg', 'سيب', 'يسب', '2018-09-29 22:28:20', '2018-09-29 22:28:20', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -112,7 +146,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2018_09_18_102950_create_notifications_table', 2),
 (9, '2018_09_19_114203_create_orders_table', 3),
 (10, '2018_09_19_114641_create_projects_cats_table', 4),
-(11, '2018_09_23_084724_create_requests_table', 5);
+(11, '2018_09_23_084724_create_requests_table', 5),
+(12, '2018_09_27_103529_create_videos_table', 6),
+(13, '2018_09_27_103802_create_images_table', 6);
 
 -- --------------------------------------------------------
 
@@ -137,7 +173,9 @@ CREATE TABLE `notifications` (
 
 INSERT INTO `notifications` (`id`, `type`, `notifiable_id`, `notifiable_type`, `data`, `read_at`, `created_at`, `updated_at`) VALUES
 ('24ef7a4e-4d87-4c1d-bc61-ff2c1edc4ca4', 'App\\Notifications\\figoname', 2, 'App\\User', '{\"data\":\"add new SERVICE \"}', NULL, '2018-09-18 10:46:39', '2018-09-18 10:46:39'),
+('3a710e2c-2bc8-4905-afce-31933d85c7df', 'App\\Notifications\\figoname', 1, 'App\\User', '{\"data\":\"add new SERVICE \"}', '2018-09-27 10:24:41', '2018-09-27 10:24:41', '2018-09-27 10:24:41'),
 ('4040f7d6-0cd9-47a3-bb79-49a35f452214', 'App\\Notifications\\figoname', 2, 'App\\User', '{\"data\":\"add new SERVICE \"}', NULL, '2018-09-18 10:21:40', '2018-09-18 10:21:40'),
+('4066da32-3a3d-4d7a-95e2-853bf58fd01d', 'App\\Notifications\\figoname', 2, 'App\\User', '{\"data\":\"add new SERVICE \"}', NULL, '2018-09-27 10:24:41', '2018-09-27 10:24:41'),
 ('7ee5fb05-fe73-4aab-97db-ac9b657137a8', 'App\\Notifications\\figoname', 2, 'App\\User', '{\"data\":\"go naw \"}', NULL, '2018-09-18 09:49:43', '2018-09-18 09:49:43'),
 ('7f398acb-3fe3-41ee-9d0d-d0f479776899', 'App\\Notifications\\figoname', 1, 'App\\User', '{\"data\":\"go naw \"}', '2018-09-18 10:46:23', '2018-09-18 09:49:42', '2018-09-18 10:46:23'),
 ('987bee22-32f7-4fcf-8c00-7ba3d840d303', 'App\\Notifications\\figoname', 1, 'App\\User', '{\"data\":\"add new SERVICE \"}', '2018-09-18 10:50:07', '2018-09-18 10:50:07', '2018-09-18 10:50:07'),
@@ -169,8 +207,9 @@ CREATE TABLE `n_e_w_s` (
 INSERT INTO `n_e_w_s` (`id`, `title`, `body`, `single_photo`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL),
 (2, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL),
-(3, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL),
-(4, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL);
+(3, 'باغبلات', 'dsf', '1136285850apartment-01-150x150.jpg', 'dsf', NULL, '2018-09-27 10:20:25', NULL),
+(4, 'باغبلات', 'dsf', '1615481246MT-5856_23.jpg', 'dsf', NULL, NULL, NULL),
+(5, 'بيال', 'لالبا', '1587166181apartment-01-150x150.jpg', 'لبابلا', '2018-09-27 10:20:11', '2018-09-27 10:20:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -183,10 +222,10 @@ CREATE TABLE `orders` (
   `quantity` int(199) DEFAULT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `phone` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `product` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `product` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -197,18 +236,12 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `quantity`, `title`, `body`, `email`, `phone`, `status`, `product`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, NULL, 'dfds', 'sfdgfdg', 'dfgf@dfgfsg.fdgfjhbk', '0145646546', 'gfdg', '125', '2018-09-20 07:10:26', '2018-09-20 07:11:12', NULL),
-(2, NULL, 'sdfd', 'sfdsf', 'figoashraf@gmail.com', '10913556457842', 'dfgdf', '67657', '2018-09-20 07:10:47', '2018-09-20 07:10:47', NULL),
-(3, NULL, 'dfds', 'sfdgfdg', 'dfgf@dfgfsg.fdgf', '0145646546', 'gfdg', '125', '2018-09-20 07:10:26', '2018-09-20 07:10:26', NULL),
-(4, NULL, 'sdfd', 'sfdsf', 'figoashraf@gmail.com', '10913556457842', 'dfgdf', '67657', '2018-09-20 07:10:47', '2018-09-20 07:10:47', NULL),
-(5, 1, 'dasfdsf', 'dsftrdsg', 'mapso@mapso.com', '1091357842', 'order', '27', '2018-09-23 07:46:55', '2018-09-23 07:46:55', NULL),
-(6, 1, 'dasfdsf', 'dsftrdsg', 'mapso@mapso.com', '1091357842', 'order', '27', '2018-09-23 07:47:09', '2018-09-23 07:47:09', NULL),
-(7, 1, 'dasfdsf', 'dsftrdsg', 'mapso@mapso.com', '1091357842', 'order', '27', '2018-09-23 07:47:35', '2018-09-23 07:47:35', NULL),
-(8, 1, 'dasfdsf', 'nbhg', 'figoashraf@gmail.com', '1091357842', 'order', '29', '2018-09-23 08:21:38', '2018-09-23 08:21:38', NULL),
-(9, 1, 'dasfdsf', 'dfgds', 'figoashraf@gmail.com', '1091357842', 'status', 'product', '2018-09-23 08:56:28', '2018-09-23 08:56:28', NULL),
-(10, 1, 'dasfdsf', 'yti', 'nwhite@yahoo.com', '1091357842', 'status', 'product', '2018-09-23 08:58:21', '2018-09-23 08:58:21', NULL),
-(11, 1, 'fg', 'retert', 'figoashraf@gmail.com', '1091357842', 'order', '28', '2018-09-23 09:24:52', '2018-09-23 09:24:52', NULL),
-(12, 1, 'dasfdsf', 'tuy', 'nwhite@yahoo.com', '1091357842', 'Message', 'product', '2018-09-23 09:25:19', '2018-09-23 09:25:19', NULL);
+(19, NULL, 'VCBCV', 'BCVBVCB', NULL, 'CVBVC', NULL, NULL, '2018-09-27 12:24:09', '2018-09-27 12:24:09', NULL),
+(20, NULL, 'Audrey Block', 'ؤلاتاااااا', 'map00so@mapso.com', '1091357842', NULL, NULL, '2018-09-29 22:16:49', '2018-09-29 22:16:49', NULL),
+(21, NULL, 'سبيب', 'يبيبيب', 'mapso@mapso.com', '1091357842', NULL, NULL, '2018-09-29 22:18:51', '2018-09-29 22:18:51', NULL),
+(22, NULL, 'محمد', 'لسيعه  يسالبعهخب ل  سيبخهلاق لخ', 'figo_00735@yahoo.com', '01054154154', 'اتصل بنا', NULL, '2018-09-29 22:20:46', '2018-09-29 22:20:46', NULL),
+(23, NULL, 'Audrey Block', 'بلبل', 'map00so@mapso.com', '1091357842', 'طلب وحدتك', NULL, '2018-09-29 22:22:22', '2018-09-29 22:22:22', NULL),
+(24, NULL, 'شقه بحري بالشروق    خالصه بنك', 'يبلبيل', 'بيلبي', 'بلبيل', 'اتصل بنا', NULL, '2018-09-30 01:55:40', '2018-09-30 01:55:40', NULL);
 
 -- --------------------------------------------------------
 
@@ -230,19 +263,19 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `products` (
   `id` int(10) UNSIGNED NOT NULL,
-  `Material` text COLLATE utf8mb4_unicode_ci,
-  `Dimentions` text COLLATE utf8mb4_unicode_ci,
+  `Area` text COLLATE utf8mb4_unicode_ci,
+  `Rooms` text COLLATE utf8mb4_unicode_ci,
   `Colors` text COLLATE utf8mb4_unicode_ci,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `single_photo` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `component` text COLLATE utf8mb4_unicode_ci,
+  `bathroom` text COLLATE utf8mb4_unicode_ci,
   `Net_weight` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `Note` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `Packing_content` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `cat_id` int(11) NOT NULL,
   `lang` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -252,15 +285,15 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `Material`, `Dimentions`, `Colors`, `name`, `body`, `single_photo`, `component`, `Net_weight`, `Note`, `Packing_content`, `cat_id`, `lang`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
+INSERT INTO `products` (`id`, `Area`, `Rooms`, `Colors`, `name`, `body`, `single_photo`, `bathroom`, `Net_weight`, `Note`, `Packing_content`, `cat_id`, `lang`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (26, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1615481246MT-5856_23.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 26, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-09-26 13:14:23', NULL),
-(27, 'bnmn', '546757', 'vgvj f fg', 'sadfds', 'Non voluptatum deleniti qui possimus. Aut placeat et nobis.Non voluptatum deleniti qui possimus. Aut placeat et nobis.', '843963112property-01-exterior-680x510.jpg', 'Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.', '257', 'aut', 'Nobis blanditiis quos non ipsum. Eveniet debitis molestiae voluptas qui voluptas.', 26, 'ar', 'dfgh dft r t rtyrytr', '2018-04-05 13:22:13', '2018-09-26 13:10:25', NULL),
+(27, 'bnmn', '546757', 'vgvj f fg', 'sadfds', 'Non voluptatum deleniti qui possimus. Aut placeat et nobis.Non voluptatum deleniti qui possimus. Aut placeat et nobis.', '843963112property-01-exterior-680x510.jpg', '5', '257', 'aut', 'Nobis blanditiis quos non ipsum. Eveniet debitis molestiae voluptas qui voluptas.', 26, 'ar', 'dfgh dft r t rtyrytr', '2018-04-05 13:22:13', '2018-09-26 13:10:25', NULL),
 (28, NULL, NULL, 'fhjg', 'Miss Phoebe Kuphal PhD', 'Quam est perferendis eius unde consequatur impedit laborum. Voluptas quod qui adipisci sit labore.', '938004168property-01-exterior-680x510.jpg', 'Mollitia eaque illo ea. Ad ut nemo praesentium et nihil.', '295', 'vitae', 'Incidunt hic minima aperiam. Maiores sunt sunt non. Hic quia ipsam nesciunt sed.', 27, 'ar', 'eum-quos-in-ipsum-consequatur', '2018-04-05 13:22:21', '2018-09-26 13:10:14', NULL),
 (29, NULL, NULL, NULL, 'Dr. Kendra Rohan', 'Voluptates sed ea magnam sed. Perferendis occaecati enim sapiente distinctio.', '1489711713property-01-exterior-680x510.jpg', 'Soluta est voluptas est dolores quia rerum. Sit iure et amet et maxime nam.', '100', 'quos', 'Quas temporibus voluptatum error ut ea. Nesciunt vel fugiat blanditiis optio reiciendis.', 27, 'ar', 'cupiditate-unde-nam-qui-quia-qui', '2018-04-05 13:22:25', '2018-09-26 13:10:51', NULL),
-(31, NULL, NULL, NULL, 'sdf', 'dfd', '843963112property-01-exterior-680x510.jpg', 'sdf', 'sdf', 'fdf', 'sdf', 32, 'ar', 'sdfd', '2018-04-15 07:43:14', '2018-04-16 08:07:18', NULL),
-(36, NULL, NULL, NULL, '282185', 'fhfgjh', '843963112property-01-exterior-680x510.jpg', 'fghfg', 'hfgh', 'fgh', 'fghfg', 32, 'ar', 'gfhfgh', '2018-04-17 05:42:37', '2018-04-17 06:12:03', NULL),
+(31, NULL, NULL, NULL, 'sdf', 'dfd', '843963112property-01-exterior-680x510.jpg', 'sdf', 'sdf', 'fdf', 'sdf', 26, 'ar', 'sdfd', '2018-04-15 07:43:14', '2018-09-29 21:12:06', NULL),
+(36, NULL, NULL, NULL, '282185', 'fhfgjh', '843963112property-01-exterior-680x510.jpg', 'fghfg', 'hfgh', 'fgh', 'fghfg', 26, 'ar', 'gfhfgh', '2018-04-17 05:42:37', '2018-09-29 21:11:55', NULL),
 (37, NULL, NULL, NULL, 'ghg', 'hgfhg', '843963112property-01-exterior-680x510.jpg', NULL, NULL, NULL, NULL, 32, NULL, 'fghgfh', '2018-07-29 09:36:59', '2018-09-17 12:43:39', NULL),
-(38, NULL, NULL, NULL, 'asdfds', 'dfgdfg', '843963112property-01-exterior-680x510.jpg', NULL, NULL, NULL, NULL, 27, NULL, 'dfgdfg', '2018-07-29 09:47:18', '2018-07-29 10:11:06', NULL),
+(38, NULL, NULL, NULL, 'asdfds', 'dfgdfg', '843963112property-01-exterior-680x510.jpg', NULL, NULL, NULL, NULL, 27, NULL, 'dfgdfg', '2018-07-29 09:47:18', '2018-09-29 21:12:46', '2018-09-29 21:12:46'),
 (39, NULL, NULL, NULL, 'tdyhfg', 'ghgfhfg', '843963112property-01-exterior-680x510.jpg', NULL, NULL, NULL, NULL, 32, NULL, 'fghgfhfgh', '2018-07-31 14:08:23', '2018-09-17 12:43:46', NULL),
 (40, NULL, NULL, NULL, 'sdf', 'dsfsdf', '893148110MT-5856_23.jpg', NULL, NULL, NULL, NULL, 26, NULL, 'sfdas', '2018-08-16 07:29:49', '2018-09-26 13:13:40', NULL),
 (41, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1718010453charge.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 32, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-09-23 08:28:38', '2018-09-23 08:28:38'),
@@ -268,7 +301,10 @@ INSERT INTO `products` (`id`, `Material`, `Dimentions`, `Colors`, `name`, `body`
 (43, NULL, 'hnjk', NULL, 'asdfsdf erfdf', 'Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.Et quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.', '1325322216MT-5856_23.jpg', 'Voluptates corporis quo iEt quas ab et magni blanditiis. Aut exercitationem iste in quia et eum.psam ratione debitis quo et voluptate. Blanditiis quia quis officiis.', '161', 'vel', 'Aut ullam enim est. Eos qui qui non molestias sit. Aperiam ut a ad sit a.', 27, 'ar', 'vel-enim-tenetur-voluptas-ut-facilis', '2018-04-05 13:22:06', '2018-09-26 13:13:08', NULL),
 (44, 'bnmn', NULL, 'bnmnb', 'sadfds', 'Non voluptatum deleniti qui possimus. Aut placeat et nobis.Non voluptatum deleniti qui possimus. Aut placeat et nobis.', '1851702741MT-5856_23.jpg', 'Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.Est ut a ut et voluptatum corporis incidunt. Blanditiis culpa velit et numquam ea tempora.', '257', 'aut', 'Nobis blanditiis quos non ipsum. Eveniet debitis molestiae voluptas qui voluptas.', 26, 'ar', 'dfgh dft r t rtyrytr', '2018-04-05 13:22:13', '2018-09-26 13:41:37', NULL),
 (45, NULL, NULL, 'fhjg', 'Miss Phoebe Kuphal PhD', 'Quam est perferendis eius unde consequatur impedit laborum. Voluptas quod qui adipisci sit labore.', '1526002178MT-5856_23.jpg', 'Mollitia eaque illo ea. Ad ut nemo praesentium et nihil.', '295', 'vitae', 'Incidunt hic minima aperiam. Maiores sunt sunt non. Hic quia ipsam nesciunt sed.', 26, 'ar', 'eum-quos-in-ipsum-consequatur', '2018-04-05 13:22:21', '2018-09-26 13:13:54', NULL),
-(46, NULL, NULL, NULL, 'Dr. Kendra Rohan', 'Voluptates sed ea magnam sed. Perferendis occaecati enim sapiente distinctio.', '463801497MT-5856_23.jpg', 'Soluta est voluptas est dolores quia rerum. Sit iure et amet et maxime nam.', '100', 'quos', 'Quas temporibus voluptatum error ut ea. Nesciunt vel fugiat blanditiis optio reiciendis.', 26, 'ar', 'cupiditate-unde-nam-qui-quia-qui', '2018-04-05 13:22:25', '2018-09-26 13:13:31', NULL);
+(46, NULL, NULL, NULL, 'Dr. Kendra Rohan', 'Voluptates sed ea magnam sed. Perferendis occaecati enim sapiente distinctio.', '463801497MT-5856_23.jpg', 'Soluta est voluptas est dolores quia rerum. Sit iure et amet et maxime nam.', '100', 'quos', 'Quas temporibus voluptatum error ut ea. Nesciunt vel fugiat blanditiis optio reiciendis.', 26, 'ar', 'cupiditate-unde-nam-qui-quia-qui', '2018-04-05 13:22:25', '2018-09-26 13:13:31', NULL),
+(47, NULL, NULL, NULL, 'dfsd', 'gfsdsg', '1821007302property-01-exterior-818x417.jpg', NULL, NULL, NULL, NULL, 32, NULL, 'sfdf', '2018-09-29 21:11:37', '2018-09-29 21:11:37', NULL),
+(48, '100', '2', NULL, 'محم', 'يبلي بلا بيلابا', '769482622property-01-exterior-818x417.jpg', '1', NULL, NULL, NULL, 26, NULL, NULL, '2018-09-30 01:45:51', '2018-09-30 01:45:51', NULL),
+(49, NULL, NULL, NULL, 'يفغاف', 'بلابلا', '50310780kitchen.jpg', NULL, NULL, NULL, NULL, 26, NULL, NULL, '2018-09-30 02:00:29', '2018-09-30 02:00:29', NULL);
 
 -- --------------------------------------------------------
 
@@ -344,7 +380,17 @@ INSERT INTO `productsphotos` (`id`, `Product_id`, `Photo`, `lang`, `created_at`,
 (77, 29, '1529899077slide-3.jpg', 'ar', '2018-09-26 13:10:52', '2018-09-26 13:10:52', NULL),
 (78, 29, '136024789slider-1.jpg', 'ar', '2018-09-26 13:10:52', '2018-09-26 13:10:52', NULL),
 (79, 40, '821640831slide-3.jpg', 'ar', '2018-09-26 13:15:03', '2018-09-26 13:15:03', NULL),
-(80, 40, '918209242slider-1.jpg', 'ar', '2018-09-26 13:15:03', '2018-09-26 13:15:03', NULL);
+(80, 40, '918209242slider-1.jpg', 'ar', '2018-09-26 13:15:03', '2018-09-26 13:15:03', NULL),
+(81, 47, '1881996902property-01-exterior-818x417.jpg', 'ar', '2018-09-29 21:11:37', '2018-09-29 21:11:37', NULL),
+(82, 47, '133845655slide-2.jpg', 'ar', '2018-09-29 21:11:38', '2018-09-29 21:11:38', NULL),
+(83, 47, '1589344031slide-3.jpg', 'ar', '2018-09-29 21:11:38', '2018-09-29 21:11:38', NULL),
+(84, 47, '787480958slider-1.jpg', 'ar', '2018-09-29 21:11:38', '2018-09-29 21:11:38', NULL),
+(85, 31, '846565469slide-2.jpg', 'ar', '2018-09-29 21:12:07', '2018-09-29 21:12:07', NULL),
+(86, 31, '1674858835slide-3.jpg', 'ar', '2018-09-29 21:12:07', '2018-09-29 21:12:07', NULL),
+(87, 31, '1939238741slider-1.jpg', 'ar', '2018-09-29 21:12:07', '2018-09-29 21:12:07', NULL),
+(88, 48, '55680352slide-2.jpg', 'ar', '2018-09-30 01:45:51', '2018-09-30 01:45:51', NULL),
+(89, 48, '839149353slide-3.jpg', 'ar', '2018-09-30 01:45:51', '2018-09-30 01:45:51', NULL),
+(90, 48, '559413981slider-1.jpg', 'ar', '2018-09-30 01:45:51', '2018-09-30 01:45:51', NULL);
 
 -- --------------------------------------------------------
 
@@ -422,28 +468,25 @@ CREATE TABLE `site_stings` (
 --
 
 INSERT INTO `site_stings` (`id`, `key`, `value`, `lang`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(27, 'Web site name', 'abaza', 'ar', '2018-04-05 15:17:11', '2018-09-17 11:11:44', NULL),
+(27, 'Web site name', 'abaza', 'ar', '2018-04-05 15:17:11', '2018-09-29 21:09:52', NULL),
 (31, 'phone', '2011117253016095', 'ar', '2018-04-05 15:17:11', '2018-08-16 09:57:17', NULL),
 (32, 'Mail', 'contact@elhelow.com', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
-(33, 'facebook', 'https://www.facebook.com/', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
-(34, 'About Us', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\n من نحنت ', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
-(35, 'mop', '040215020202', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
-(36, 'logo', 'logo.png', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
+(33, 'facebook', 'https://facebook.com', 'ar', '2018-04-05 15:17:11', '2018-09-27 10:23:41', NULL),
+(34, 'About Us', 'بدأ العمل في شركة سفير عام 2005 وتطورت الشركة في هذا المجال حتي أنتجت الكثير من المنتجات التي تخدم المجال, حيث تسعي شركة سفير لتوفير أجود المنتجات بأفضل الأسعار التنافسية للأسواق المصرية والتصدير بفضل الخبرة الطويلة للكادر الإداري والمؤهلات العالية للفنين والعمال\r\n<br>\r\nتقع شركة سفير في المنطقة الصناعية الثانية بمدينة 6 أكتوبر والإدارة بشارع الهرم في الجيزة\r\n\r\n', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
+(35, 'mop', '0105485151', 'ar', '2018-04-05 15:17:12', '2018-09-27 10:23:34', NULL),
 (37, 'Location', 'Lorem ipsum dolor sit amet consectetur adipisicing.', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
 (38, 'working time', '  \r\nالمواعيد من 09:00 ص الي 05:00 م كل يوم ماعدا الجمعة  ', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
-(39, 'about photo', 'about.png', 'ar', NULL, NULL, NULL),
-(53, 'slider', '  في هذه الأيام أصبح من العبء الحصول علي أثاث مريح وعالاي الجودة, نحن في بامبو نيو هاوس نقدم لك الحل المثالي الذي يجمع بين المتانة والجمال, أثاث بامبو - أثاث الراتان - أثاث حدائق - أثاث خارجي - أثاث مطاعم - أثاث كافيهات - أثاث شاليهات - أثاث فنادق \"\r\n\r\n', 'ar', '2018-04-05 15:17:11', '2018-04-17 05:56:24', NULL),
 (54, 'twitter', 'https://www.twitter.com/', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
 (55, 'linkedin', 'https://www.linkedin.com', 'ar', '2018-04-05 15:17:11', '2018-07-29 10:22:04', NULL),
-(56, 'About Us2', 'كل اللي بتدور عليه في اي منتج بتشتريه هو \" الجودة - الشكل - السعر المناسب \" احنا حققنالك كل ده في اطقم الراتان و البامبو اللي محتاجهم لـ ( التراس - الفيلا - الشالية - الكافيه ....)\r\n\r\nالجودة : خامات طبيعية نفذت في مصنعنا\r\n\r\nالشكل : نفذنا تصميمات جديدة مناسبة لموضة السنة الجديدة\r\n\r\nالسعر : بنقدملك عروض وأسعار مناسبة', 'ar', '2018-04-05 15:17:11', '2018-04-05 15:17:11', NULL),
-(64, 'google_maps', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13807.37692040264!2d31.29403223201093!3d30.098647209800102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fd5fe49af1f%3A0x38b98f00a8c9dcea!2sAl+Qubbaah+Palace%2C+AZ+Zaytoun+Al+Qebleyah%2C+El-Zaytoun%2C+Cairo+Governorate!5e0!3m2!1sen!2seg!4v1537701831996\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
+(64, 'google_maps', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1727.8274029365166!2d31.20529!3d29.989349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9658da1c3b35a4ab!2sAlmahmoudya+Towers!5e0!3m2!1sen!2seg!4v1538056853888\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
 (65, 'instagram', 'https://www.instagram.com', 'ar', '2018-04-05 15:17:11', '2018-07-29 10:22:04', NULL),
 (66, 'quote', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\n', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
 (68, 'Target', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\nهدف ', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
 (69, 'Vision', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء\r\nرؤيه', 'ar', '2018-04-05 15:17:11', '2018-07-29 10:22:04', NULL),
 (70, 'message', '                 في     نحن نركز في تقديم المشورة السليمة والصادقة للاستثمار العقاري، ووضع حلول قاطعة لاحتياجات العملاء رساله  \r\n', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL),
 (71, 'Location2', 'Lorem ipsum dolor sit amet consectetur adipisicing.', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
-(72, 'google_maps2', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13807.37692040264!2d31.29403223201093!3d30.098647209800102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fd5fe49af1f%3A0x38b98f00a8c9dcea!2sAl+Qubbaah+Palace%2C+AZ+Zaytoun+Al+Qebleyah%2C+El-Zaytoun%2C+Cairo+Governorate!5e0!3m2!1sen!2seg!4v1537701831996\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL);
+(73, 'Location3', 'Lorem ipsum dolor sit amet consectetur adipisicing.', 'ar', '2018-04-05 15:17:12', '2018-04-05 15:17:12', NULL),
+(74, 'google_maps2', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1727.8274029365166!2d31.20529!3d29.989349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9658da1c3b35a4ab!2sAlmahmoudya+Towers!5e0!3m2!1sen!2seg!4v1538056853888\" width=\"100%\" height=\"450\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>', 'ar', '2018-04-05 15:17:11', '2018-09-23 09:24:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -468,9 +511,10 @@ CREATE TABLE `sliders` (
 
 INSERT INTO `sliders` (`id`, `cat_id`, `lang`, `single_photo`, `title`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (5, 5, 'ar', '1991171399banner.jpg', 'يبالال لاغفلا', '2018-04-05 13:23:11', '2018-09-26 12:59:02', '2018-09-26 12:59:02'),
-(6, 1, 'en', '706010503slider-1.jpg', 'frdhd', '2018-04-05 13:23:12', '2018-09-26 12:53:37', NULL),
+(6, 1, 'en', '587099495slider-1.jpg', 'frdhd', '2018-04-05 13:23:12', '2018-09-27 10:10:33', NULL),
 (11, 5, 'en', '1107575438slide-3.jpg', 'Mr. Archibald Anderson DVM', '2018-04-05 13:23:03', '2018-09-26 12:53:44', NULL),
-(22, NULL, NULL, '1373125946banner.jpg', 'fre', '2018-09-26 12:52:35', '2018-09-26 12:52:35', NULL);
+(22, NULL, NULL, '1373125946banner.jpg', 'fre', '2018-09-26 12:52:35', '2018-09-26 12:52:35', NULL),
+(23, NULL, NULL, '1358160170slide-2.jpg', 'لبتا', '2018-09-27 10:10:20', '2018-09-27 10:10:20', NULL);
 
 -- --------------------------------------------------------
 
@@ -496,10 +540,11 @@ CREATE TABLE `s_e_r_v_i_c_e_s` (
 INSERT INTO `s_e_r_v_i_c_e_s` (`id`, `title`, `slug`, `single_photo`, `body`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (5, 'fgjhgj', 'hgjhg', '711399538service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:18:04', '2018-09-27 06:30:59', NULL),
 (7, 'fgjhgj', 'hgjhg', '1705457974service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:19:24', '2018-09-27 06:31:10', NULL),
-(9, 'fgjhgj', 'hgjhg', '1137738363service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:21:51', '2018-09-27 06:31:15', NULL),
+(9, 'fgjhgj', 'hgjhg', '641236817icon-advance-search.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:21:51', '2018-09-29 21:12:33', '2018-09-29 21:12:33'),
 (10, 'fgjhgj', 'hgjhg', '248553533service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:22:13', '2018-09-27 06:31:20', NULL),
 (11, 'fgjhgj', 'hgjhg', '316657210service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:22:50', '2018-09-27 06:31:25', NULL),
-(12, 'fgjhgj', 'hgjhg', '1633036904service-icon.png', 'Lorem ipsum dolor sit amet consectetur adipisicing.', '2018-09-18 09:23:23', '2018-09-27 06:31:31', NULL);
+(12, 'fgjhgj', 'hgjhg', '1741461407drawing-room.jpg', 'sdftgfdg', '2018-09-18 09:23:23', '2018-09-29 21:13:12', '2018-09-29 21:13:12'),
+(13, 'gh', 'fhj', '39091803condo-lobby.jpg', 'hgjhgj', '2018-09-27 10:24:40', '2018-09-29 21:12:56', '2018-09-29 21:12:56');
 
 -- --------------------------------------------------------
 
@@ -552,6 +597,35 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 (1, 'Joelle Bosco', 'nwhite@yahoo.com', '$2y$10$HqCVKUd5C6jWfdQmZQSix.glqiEl8a2r3xLBmwlHaOrg4b1fRKUKK', 'ySy3cfL83pfdNrtxLhTuePT5SmfoNWofb4rx7PRyvyLeg5ooy8Vbcahktpq0', '2018-04-05 13:23:17', '2018-04-05 13:23:17'),
 (2, 'Sid Streich', 'estel.gerhold@gmail.com', '$2y$10$JmylC8mZvFoWi4N0BZTlTOSi5gCwxLNHic.A6EnzYGsNxcKTDqRq.', NULL, '2018-04-05 13:23:17', '2018-04-05 13:23:17');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `link` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci,
+  `single_photo` text COLLATE utf8mb4_unicode_ci,
+  `type` text COLLATE utf8mb4_unicode_ci,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `videos`
+--
+
+INSERT INTO `videos` (`id`, `link`, `title`, `body`, `single_photo`, `type`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, '<iframe width=\"100%\" height=\"200\" src=\"https://www.youtube.com/embed/cLbGlqCfP24\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'sdafds', 'fdsf', 'sdfds', 'dsfds', '2018-09-27 09:31:58', '2018-09-29 22:40:13', NULL),
+(2, '<iframe width=\"100%\" height=\"200\" src=\"https://www.youtube.com/embed/cLbGlqCfP24\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'محمد اشرف', NULL, NULL, NULL, '2018-09-27 09:33:44', '2018-09-29 23:47:23', NULL),
+(3, '<iframe width=\"100%\" height=\"200\" src=\"https://www.youtube.com/embed/cLbGlqCfP24\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'fdgfdgfd', NULL, NULL, NULL, '2018-09-27 09:33:58', '2018-09-29 22:43:32', NULL),
+(4, '<iframe width=\"100%\" height=\"200\" src=\"https://www.youtube.com/embed/ZyW4REsC9rU\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'بيلبيل', 'يبلبيل', 'يبلبي', 'بيل', '2018-09-29 22:26:48', '2018-09-29 22:40:54', NULL),
+(5, '<iframe width=\"100%\" height=\"200\" src=\"https://www.youtube.com/embed/ZyW4REsC9rU\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', 'يبيسب', 'سبيسشب', 'يسبيس', 'بيسبي', '2018-09-29 22:27:23', '2018-09-29 22:41:11', NULL);
+
 --
 -- Indexes for dumped tables
 --
@@ -566,6 +640,12 @@ ALTER TABLE `categories__products`
 -- Indexes for table `clients`
 --
 ALTER TABLE `clients`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -655,6 +735,12 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Indexes for table `videos`
+--
+ALTER TABLE `videos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -671,34 +757,40 @@ ALTER TABLE `clients`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `n_e_w_s`
 --
 ALTER TABLE `n_e_w_s`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `productsphotos`
 --
 ALTER TABLE `productsphotos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `projects_cats`
@@ -716,19 +808,19 @@ ALTER TABLE `requests`
 -- AUTO_INCREMENT for table `site_stings`
 --
 ALTER TABLE `site_stings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `s_e_r_v_i_c_e_s`
 --
 ALTER TABLE `s_e_r_v_i_c_e_s`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `types`
@@ -741,6 +833,12 @@ ALTER TABLE `types`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `videos`
+--
+ALTER TABLE `videos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
